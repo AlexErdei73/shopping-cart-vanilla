@@ -30,3 +30,7 @@ nav button {
 	padding: 0.5em;
 	min-width: max-content;
 }
+
+main {
+	margin-top: 5em;
+}
