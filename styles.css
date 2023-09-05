@@ -1,0 +1,32 @@
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: darkcyan;
+	color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+nav .logo {
+	min-width: max-content;
+	margin-left: 1em;
+}
+
+nav ul {
+	flex: 1 1 30em;
+	display: flex;
+	justify-content: flex-end;
+	list-style: none;
+	padding: 0 1em;
+}
+
+nav button {
+	background-color: darkcyan;
+	color: white;
+	border: none;
+	padding: 0.5em;
+	min-width: max-content;
+}
