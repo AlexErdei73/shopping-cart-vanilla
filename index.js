@@ -43,3 +43,11 @@ addEventListener("beforeunload", (event) => {
   const index = components.indexOf(component);
   history.replaceState({ index }, "", "/");
 });
+
+if (history.state) {
+  const index = history.state.index;
+  if (index > 0) {
+    history.replaceState({ index }, "", `/${components[index]}`);
+    updateDOM(index);
+  }
+}
