@@ -14,6 +14,7 @@ main.appendChild(nodes[0]);
 const navButtons = document.querySelectorAll("nav button");
 
 function updateDOM(index) {
+  console.log(index);
   const childNode = main.childNodes[0];
   childNode.remove();
   main.appendChild(nodes[index]);
@@ -21,7 +22,13 @@ function updateDOM(index) {
 
 function handleNavButtonClick(event) {
   const button = event.target;
-  const index = Array.from(navButtons).indexOf(button);
+  if (button.id === "dropdown") {
+    const dropDownMenu = document.querySelector("#dropdown-menu");
+    dropDownMenu.classList.toggle("hide");
+    return;
+  }
+  let index = Array.from(navButtons).indexOf(button);
+  if (index > 3) index = index - 4;
   history.pushState({ index }, "", button.getAttribute("href"));
   updateDOM(index);
 }

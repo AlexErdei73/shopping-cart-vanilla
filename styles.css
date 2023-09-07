@@ -1,36 +1,90 @@
 nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: darkcyan;
-	color: white;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkcyan;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 nav .logo {
-	min-width: max-content;
-	margin-left: 1em;
+  min-width: max-content;
+  margin: 0 0 0 1em;
 }
 
 nav ul {
-	flex: 1 1 30em;
-	display: flex;
-	justify-content: flex-end;
-	list-style: none;
-	padding: 0 1em;
+  flex: 1 1 30em;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0 1em;
+}
+
+nav li {
+  flex: 0 1 12em;
 }
 
 nav button {
-	background-color: darkcyan;
-	color: white;
-	border: none;
-	padding: 0.5em;
-	min-width: max-content;
+  background-color: darkcyan;
+  color: white;
+  font-size: 120%;
+  border: none;
+  min-width: max-content;
+  width: 100%;
+  min-width: fit-content;
+}
+
+nav #dropdown {
+  display: none;
 }
 
 main {
-	margin-top: 5em;
+  margin-top: 3.5em;
+}
+
+.hide {
+  display: none !important;
+}
+
+#dropdown-menu {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 1.5em;
+  right: 0;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#dropdown-menu li {
+  flex-basis: 0;
+}
+
+@media (max-width: 27em) {
+  nav .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 13em) {
+  nav {
+    justify-content: flex-end;
+  }
+  nav ul {
+    display: none;
+  }
+  nav #dropdown {
+    display: block;
+    width: 1.3em;
+    border-radius: 50%;
+    border: 1px white solid;
+  }
+  main {
+    margin-top: 0.5em;
+  }
 }
