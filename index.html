@@ -14,25 +14,78 @@
         <h1 class="logo">Shopping Cart</h1>
         <ul>
           <li>
-            <button type="button" href="./home">Home</button>
+            <button type="button" href="./home" role="link">Home</button>
           </li>
           <li>
-            <button type="button" href="./shopping">Shopping</button>
+            <button type="button" href="./shopping" role="link">
+              Shopping
+            </button>
           </li>
           <li>
-            <button type="button" href="./cart">Cart</button>
+            <button
+              type="button"
+              href="./cart"
+              role="link"
+              aria-labelledby="tag"
+            >
+              <svg class="icon icon-cart">
+                <use xlink:href="./images/icons.svg#icon-cart"></use>
+              </svg>
+              <span
+                class="name"
+                style="
+                  position: absolute;
+                  width: 0;
+                  height: 0;
+                  overflow: hidden;
+                "
+              >
+                cart
+              </span>
+            </button>
           </li>
         </ul>
-        <button type="button" id="dropdown">V</button>
+        <button type="button" id="dropdown">
+          <svg class="icon icon-arrow_drop_down">
+            <use xlink:href="./images/icons.svg#icon-arrow_drop_down"></use>
+          </svg>
+          <span
+            class="name"
+            style="position: absolute; width: 0; height: 0; overflow: hidden"
+          >
+            dropdown menu
+          </span>
+        </button>
         <ul class="hide" id="dropdown-menu">
           <li>
-            <button type="button" href="./home">Home</button>
+            <button type="button" href="./home" role="link">Home</button>
           </li>
           <li>
-            <button type="button" href="./shopping">Shopping</button>
+            <button type="button" href="./shopping" role="link">
+              Shopping
+            </button>
           </li>
           <li>
-            <button type="button" href="./cart">Cart</button>
+            <button
+              type="button"
+              href="./cart"
+              role="link"
+              aria-labelledby="tag"
+            >
+              <svg class="icon icon-cart">
+                <use xlink:href="./images/icons.svg#icon-cart"></use>
+              </svg>
+              <span
+                class="name"
+                style="
+                  position: absolute;
+                  width: 0;
+                  height: 0;
+                  overflow: hidden;
+                "
+                >cart</span
+              >
+            </button>
           </li>
         </ul>
       </nav>

@@ -41,6 +41,12 @@ nav button {
   min-width: max-content;
   width: 100%;
   min-width: fit-content;
+  cursor: pointer;
+}
+
+nav img {
+  width: 1.5rem;
+  height: auto;
 }
 
 nav #dropdown {
@@ -60,16 +66,35 @@ main {
   margin: 0;
   padding: 0;
   position: fixed;
-  top: 1.5em;
+  top: 1.54em;
   right: 0;
   width: max-content;
-  display: flex;
+  display: none;
   flex-direction: column;
-  gap: 2px;
+  gap: 0.04em;
 }
 
 #dropdown-menu li {
   flex-basis: 0;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.icon-cart {
+  color: white;
+  font-size: 1em;
+}
+
+.icon-arrow_drop_down {
+  position: relative;
+  top: 0.125em;
 }
 
 @media (max-width: 27em) {
@@ -91,6 +116,11 @@ main {
     border-radius: 50%;
     border: 1px white solid;
   }
+
+  #dropdown-menu {
+    display: flex;
+  }
+
   main {
     margin-top: 0.5em;
   }

@@ -21,7 +21,7 @@ function updateDOM(index) {
 }
 
 function handleNavButtonClick(event) {
-  const button = event.target;
+  const button = event.currentTarget;
   if (button.id === "dropdown") {
     const dropDownMenu = document.querySelector("#dropdown-menu");
     dropDownMenu.classList.toggle("hide");
