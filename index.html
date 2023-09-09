@@ -11,21 +11,16 @@
   <body>
     <header>
       <nav>
-        <div class="logo"><strong>Shopping Cart</strong></div>
+        <a class="logo" href="/"><strong>Shopping Cart</strong></a>
         <ul>
           <li>
-            <button type="button" href="/home" role="link">Home</button>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <button type="button" href="/shopping" role="link">Shopping</button>
+            <a href="#shopping">Shopping</a>
           </li>
           <li>
-            <button
-              type="button"
-              href="/cart"
-              role="link"
-              aria-labelledby="tag"
-            >
+            <a href="#cart" aria-labelledby="tag">
               <svg class="icon icon-cart">
                 <use xlink:href="./images/icons.svg#icon-cart"></use>
               </svg>
@@ -40,7 +35,7 @@
               >
                 cart
               </span>
-            </button>
+            </a>
           </li>
         </ul>
         <button type="button" id="dropdown">
@@ -56,18 +51,13 @@
         </button>
         <ul class="hide" id="dropdown-menu">
           <li>
-            <button type="button" href="/home" role="link">Home</button>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <button type="button" href="/shopping" role="link">Shopping</button>
+            <a href="#shopping">Shopping</a>
           </li>
           <li>
-            <button
-              type="button"
-              href="./cart"
-              role="link"
-              aria-labelledby="tag"
-            >
+            <a href="#cart" aria-labelledby="tag">
               <svg class="icon icon-cart">
                 <use xlink:href="./images/icons.svg#icon-cart"></use>
               </svg>
@@ -79,9 +69,10 @@
                   height: 0;
                   overflow: hidden;
                 "
-                >cart</span
               >
-            </button>
+                cart
+              </span>
+            </a>
           </li>
         </ul>
       </nav>

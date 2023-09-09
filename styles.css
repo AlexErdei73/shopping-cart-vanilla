@@ -3,14 +3,13 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: darkcyan;
+  background-color: rgb(0, 99, 99);
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: darkcyan;
   color: white;
   max-width: 100rem;
   margin: auto;
@@ -20,10 +19,11 @@ nav .logo {
   min-width: max-content;
   margin: 0 0 0 1em;
   font-size: 1.5em;
+  text-align: left;
 }
 
 nav ul {
-  flex: 1 1 30em;
+  flex: 1 1 45em;
   display: flex;
   justify-content: flex-end;
   list-style: none;
@@ -31,27 +31,37 @@ nav ul {
 }
 
 nav li {
-  flex: 0 1 12em;
+  flex: 0 1 15em;
+  gap: 0.25em;
+  background-color: rgb(0, 99, 99);
 }
 
-nav button {
-  background-color: darkcyan;
+nav a {
+  display: block;
+  color: lightcyan;
+  font-size: 120%;
+  font-weight: 600;
+  border: none;
+  min-width: max-content;
+  width: 100%;
+  min-width: fit-content;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
   color: white;
+}
+
+nav #dropdown {
+  display: none;
+  background-color: rgb(0, 99, 99);
+  color: lightcyan;
   font-size: 120%;
   border: none;
   min-width: max-content;
   width: 100%;
   min-width: fit-content;
-  cursor: pointer;
-}
-
-nav img {
-  width: 1.5rem;
-  height: auto;
-}
-
-nav #dropdown {
-  display: none;
 }
 
 main {
@@ -67,7 +77,7 @@ main {
   margin: 0;
   padding: 0;
   position: fixed;
-  top: 1.54em;
+  top: 1.65em;
   right: 0;
   width: max-content;
   display: none;
@@ -89,22 +99,31 @@ main {
 }
 
 .icon-cart {
-  color: white;
+  color: lightcyan;
   font-size: 1em;
 }
 
+.icon-cart:hover {
+  color: white;
+}
+
 .icon-arrow_drop_down {
+  color: lightcyan;
   position: relative;
   top: 0.125em;
 }
 
-@media (max-width: 27em) {
+.icon-arrow_drop_down:hover {
+  color: white;
+}
+
+@media (max-width: 35em) {
   nav .logo {
     display: none;
   }
 }
 
-@media (max-width: 13em) {
+@media (max-width: 18em) {
   nav {
     justify-content: flex-end;
   }
