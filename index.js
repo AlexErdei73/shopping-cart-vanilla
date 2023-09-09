@@ -1,7 +1,11 @@
+const title = document.querySelector("title");
+
 const main = document.querySelector("main");
 
 const components = ["home", "shopping", "cart"];
 const nodes = [];
+
+const baseURL = "/shopping-cart-vanilla";
 
 const templates = document.querySelectorAll("template");
 templates.forEach((temp, i) => {
@@ -14,10 +18,13 @@ main.appendChild(nodes[0]);
 const navButtons = document.querySelectorAll("nav button");
 
 function updateDOM(index) {
-  console.log(index);
   const childNode = main.childNodes[0];
-  childNode.remove();
+  if (childNode) childNode.remove();
   main.appendChild(nodes[index]);
+
+  title.textContent = `${components[index]} page - Shopping Cart Vanilla`;
+
+  document.querySelector("main h1").focus();
 }
 
 function handleNavButtonClick(event) {
@@ -29,7 +36,7 @@ function handleNavButtonClick(event) {
   }
   let index = Array.from(navButtons).indexOf(button);
   if (index > 3) index = index - 4;
-  history.pushState({ index }, "", button.getAttribute("href"));
+  history.pushState({ index }, "", baseURL + button.getAttribute("href"));
   updateDOM(index);
 }
 
@@ -47,14 +54,18 @@ addEventListener("popstate", (event) => {
 addEventListener("beforeunload", (event) => {
   const URL = event.target.URL;
   const component = URL.slice(URL.lastIndexOf("/") + 1);
-  const index = components.indexOf(component);
-  history.replaceState({ index }, "", "/");
+  let index = components.indexOf(component);
+  if (component === baseURL) index = 0;
+  history.replaceState({ index }, "", baseURL + "/");
+  console.log("beforeunload, state: ", history.state);
 });
 
-if (history.state) {
-  const index = history.state.index;
-  if (index > 0) {
-    history.replaceState({ index }, "", `/${components[index]}`);
+window.addEventListener("DOMContentLoaded", function () {
+  console.log("loading, state: ", history.state);
+  if (history.state) {
+    let index = history.state.index;
+    let URL = `${baseURL}/${components[index]}`;
+    history.replaceState({ index }, "", URL);
     updateDOM(index);
   }
-}
+});

@@ -19,6 +19,7 @@ nav {
 nav .logo {
   min-width: max-content;
   margin: 0 0 0 1em;
+  font-size: 1.5em;
 }
 
 nav ul {

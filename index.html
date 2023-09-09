@@ -6,25 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <script type="module" src="./index.js"></script>
-    <title>Shopping Cart Vanilla</title>
+    <title aria-live="polite">home page - Shopping Cart Vanilla</title>
   </head>
   <body>
     <header>
       <nav>
-        <h1 class="logo">Shopping Cart</h1>
+        <div class="logo"><strong>Shopping Cart</strong></div>
         <ul>
           <li>
-            <button type="button" href="./home" role="link">Home</button>
+            <button type="button" href="/home" role="link">Home</button>
           </li>
           <li>
-            <button type="button" href="./shopping" role="link">
-              Shopping
-            </button>
+            <button type="button" href="/shopping" role="link">Shopping</button>
           </li>
           <li>
             <button
               type="button"
-              href="./cart"
+              href="/cart"
               role="link"
               aria-labelledby="tag"
             >
@@ -58,12 +56,10 @@
         </button>
         <ul class="hide" id="dropdown-menu">
           <li>
-            <button type="button" href="./home" role="link">Home</button>
+            <button type="button" href="/home" role="link">Home</button>
           </li>
           <li>
-            <button type="button" href="./shopping" role="link">
-              Shopping
-            </button>
+            <button type="button" href="/shopping" role="link">Shopping</button>
           </li>
           <li>
             <button
@@ -94,21 +90,21 @@
 
     <template>
       <div class="home">
-        <h2>Home</h2>
+        <h1>Home</h1>
         <a href="https://www.theodinproject.com">The Odin Project</a>
       </div>
     </template>
 
     <template>
       <div class="shopping">
-        <h2>Shopping</h2>
+        <h1>Shopping</h1>
         <a href="https://www.theodinproject.com">The Odin Project</a>
       </div>
     </template>
 
     <template>
       <div class="cart">
-        <h2>Cart</h2>
+        <h1>Cart</h1>
         <a href="https://www.theodinproject.com">The Odin Project</a>
       </div>
     </template>
