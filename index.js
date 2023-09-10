@@ -1,5 +1,6 @@
-const title = document.querySelector("title");
-const main = document.querySelector("main");
+const titleNode = document.querySelector("title");
+const pageTitleLiveRegion = document.querySelector("#page-title-live-region");
+const mainNode = document.querySelector("main");
 const dropdownButton = document.querySelector("#dropdown");
 
 const components = ["home", "shopping", "cart"];
@@ -12,11 +13,13 @@ templates.forEach((temp, i) => {
 });
 
 function updateDOM(index) {
-  const childNode = main.childNodes[0];
+  const childNode = mainNode.childNodes[0];
   if (childNode) childNode.remove();
-  main.appendChild(nodes[index]);
+  mainNode.appendChild(nodes[index]);
 
-  title.textContent = `${components[index]} page - Shopping Cart Vanilla`;
+  const title = `${components[index]} page - Shopping Cart Vanilla`;
+  titleNode.textContent = title;
+  pageTitleLiveRegion.textContent = title;
 
   document.querySelector("main h1").focus();
 }

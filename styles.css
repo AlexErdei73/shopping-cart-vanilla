@@ -69,7 +69,7 @@ main {
   max-width: 100rem;
 }
 
-.hide {
+.hidden {
   display: none !important;
 }
 
@@ -115,6 +115,13 @@ main {
 
 .icon-arrow_drop_down:hover {
   color: white;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 @media (max-width: 35em) {

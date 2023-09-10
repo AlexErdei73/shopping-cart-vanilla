@@ -1,106 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script type="module" src="./index.js"></script>
-    <title>home page - Shopping Cart Vanilla</title>
-  </head>
-  <body>
-    <header>
-      div.
-      <nav>
-        <a class="logo" href="/shopping-cart-vanilla"
-          ><strong>Shopping Cart</strong></a
-        >
-        <ul>
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#shopping">Shopping</a>
-          </li>
-          <li>
-            <a href="#cart" aria-labelledby="tag">
-              <svg class="icon icon-cart">
-                <use xlink:href="./images/icons.svg#icon-cart"></use>
-              </svg>
-              <span
-                class="name"
-                style="
-                  position: absolute;
-                  width: 0;
-                  height: 0;
-                  overflow: hidden;
-                "
-              >
-                cart
-              </span>
-            </a>
-          </li>
-        </ul>
-        <button type="button" id="dropdown">
-          <svg class="icon icon-arrow_drop_down">
-            <use xlink:href="./images/icons.svg#icon-arrow_drop_down"></use>
-          </svg>
-          <span
-            class="name"
-            style="position: absolute; width: 0; height: 0; overflow: hidden"
-          >
-            dropdown menu
-          </span>
-        </button>
-        <ul class="hidden" id="dropdown-menu">
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#shopping">Shopping</a>
-          </li>
-          <li>
-            <a href="#cart" aria-labelledby="tag">
-              <svg class="icon icon-cart">
-                <use xlink:href="./images/icons.svg#icon-cart"></use>
-              </svg>
-              <span
-                class="name"
-                style="
-                  position: absolute;
-                  width: 0;
-                  height: 0;
-                  overflow: hidden;
-                "
-              >
-                cart
-              </span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main></main>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles.css" />
+		<script type="module" src="./index.js"></script>
+		<title>home page - Shopping Cart Vanilla</title>
+	</head>
+	<body>
+		<header>
+			<div
+				id="page-title-live-region"
+				class="visually-hidden"
+				aria-live="polite"
+			></div>
+			<nav>
+				<a class="logo" href="/shopping-cart-vanilla">
+					<strong>Shopping Cart</strong>
+				</a>
+				<ul>
+					<li>
+						<a href="#home">Home</a>
+					</li>
+					<li>
+						<a href="#shopping">Shopping</a>
+					</li>
+					<li>
+						<a href="#cart" aria-labelledby="tag">
+							<svg class="icon icon-cart">
+								<use xlink:href="./images/icons.svg#icon-cart"></use>
+							</svg>
+							<span class="name visually-hidden"> cart </span>
+						</a>
+					</li>
+				</ul>
+				<button type="button" id="dropdown">
+					<svg class="icon icon-arrow_drop_down">
+						<use xlink:href="./images/icons.svg#icon-arrow_drop_down"></use>
+					</svg>
+					<span class="name visually-hidden"> dropdown menu </span>
+				</button>
+				<ul class="hidden" id="dropdown-menu">
+					<li>
+						<a href="#home">Home</a>
+					</li>
+					<li>
+						<a href="#shopping">Shopping</a>
+					</li>
+					<li>
+						<a href="#cart" aria-labelledby="tag">
+							<svg class="icon icon-cart">
+								<use xlink:href="./images/icons.svg#icon-cart"></use>
+							</svg>
+							<span class="name visually-hidden">cart</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main></main>
 
-    <template>
-      <div class="home">
-        <h1>Home</h1>
-        <a href="https://www.theodinproject.com">The Odin Project</a>
-      </div>
-    </template>
+		<template>
+			<div class="home">
+				<h1>Home</h1>
+				<a href="https://www.theodinproject.com">The Odin Project</a>
+			</div>
+		</template>
 
-    <template>
-      <div class="shopping">
-        <h1>Shopping</h1>
-        <a href="https://www.theodinproject.com">The Odin Project</a>
-      </div>
-    </template>
+		<template>
+			<div class="shopping">
+				<h1>Shopping</h1>
+				<a href="https://www.theodinproject.com">The Odin Project</a>
+			</div>
+		</template>
 
-    <template>
-      <div class="cart">
-        <h1>Cart</h1>
-        <a href="https://www.theodinproject.com">The Odin Project</a>
-      </div>
-    </template>
-  </body>
+		<template>
+			<div class="cart">
+				<h1>Cart</h1>
+				<a href="https://www.theodinproject.com">The Odin Project</a>
+			</div>
+		</template>
+	</body>
 </html>
