@@ -1,85 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./styles.css" />
-		<script type="module" src="./index.js"></script>
-		<title>home page - Shopping Cart Vanilla</title>
-	</head>
-	<body>
-		<header>
-			<div
-				id="page-title-live-region"
-				class="visually-hidden"
-				aria-live="polite"
-			></div>
-			<nav>
-				<a class="logo" href="/shopping-cart-vanilla">
-					<strong>Shopping Cart</strong>
-				</a>
-				<ul>
-					<li>
-						<a href="#home">Home</a>
-					</li>
-					<li>
-						<a href="#shopping">Shopping</a>
-					</li>
-					<li>
-						<a href="#cart" aria-labelledby="tag">
-							<svg class="icon icon-cart">
-								<use xlink:href="./images/icons.svg#icon-cart"></use>
-							</svg>
-							<span class="name visually-hidden"> cart </span>
-						</a>
-					</li>
-				</ul>
-				<button type="button" id="dropdown">
-					<svg class="icon icon-arrow_drop_down">
-						<use xlink:href="./images/icons.svg#icon-arrow_drop_down"></use>
-					</svg>
-					<span class="name visually-hidden"> dropdown menu </span>
-				</button>
-				<ul class="hidden" id="dropdown-menu">
-					<li>
-						<a href="#home">Home</a>
-					</li>
-					<li>
-						<a href="#shopping">Shopping</a>
-					</li>
-					<li>
-						<a href="#cart" aria-labelledby="tag">
-							<svg class="icon icon-cart">
-								<use xlink:href="./images/icons.svg#icon-cart"></use>
-							</svg>
-							<span class="name visually-hidden">cart</span>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main></main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./index.js"></script>
+    <title>home page - Shopping Cart Vanilla</title>
+  </head>
+  <body>
+    <header>
+      <div
+        id="page-title-live-region"
+        class="visually-hidden"
+        aria-live="polite"
+      ></div>
+      <nav>
+        <a class="logo" href="/shopping-cart-vanilla">
+          <strong>Shopping Cart</strong>
+        </a>
+        <ul>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#shopping">Shopping</a>
+          </li>
+          <li>
+            <a href="#cart" aria-labelledby="tag">
+              <svg class="icon icon-cart">
+                <use xlink:href="./images/icons.svg#icon-cart"></use>
+              </svg>
+              <span class="name visually-hidden"> cart </span>
+            </a>
+          </li>
+        </ul>
+        <button type="button" id="dropdown">
+          <svg class="icon icon-arrow_drop_down">
+            <use xlink:href="./images/icons.svg#icon-arrow_drop_down"></use>
+          </svg>
+          <span class="name visually-hidden"> dropdown menu </span>
+        </button>
+        <ul class="hidden" id="dropdown-menu">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#shopping">Shopping</a>
+          </li>
+          <li>
+            <a href="#cart" aria-labelledby="tag">
+              <svg class="icon icon-cart">
+                <use xlink:href="./images/icons.svg#icon-cart"></use>
+              </svg>
+              <span class="name visually-hidden">cart</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main></main>
 
-		<template>
-			<div class="home">
-				<h1>Home</h1>
-				<a href="https://www.theodinproject.com">The Odin Project</a>
-			</div>
-		</template>
+    <template>
+      <div class="home">
+        <article>
+          <h1>Undergraduate Physics Books Recommendation</h1>
+          <div class="section-container">
+            <div class="image-container">
+              <img src="./images/home/math.webp" alt="maths on blackboard" />
+            </div>
+          </div>
+          <div class="text-container">
+            <h2>Prerequisites</h2>
+            <p>
+              To excel in this subject, you should have a solid understanding of
+              secondary school-level physics and mathematics. Proficiency in
+              calculus, both single and multivariable functions, is essential
+              before embarking on your studies with these books. Additionally,
+              it is highly beneficial to supplement your learning with online
+              resources such as
+              <a src="https://www.youtube.com/channel/UCiEHVhv0SBMpP75JbzJShqw">
+                Walter Lewin's lectures
+              </a>
+              on experimental physics.
+            </p>
+            <h2>Mathematical Methods in the Physical Sciences</h2>
+            <p>
+              This classic textbook presents complex mathematical concepts in
+              the most accessible manner possible. It offers a plethora of
+              problems designed to equip you with the mathematical skills
+              required for undergraduate-level physics studies. It is imperative
+              that you diligently work through these problems to fully grasp the
+              material. Remember, there are no shortcuts, even if you find the
+              amount of practice overwhelming. This foundational math knowledge
+              is indispensable for tackling the remainder of your physics
+              coursework.
+            </p>
+            <h2>The Feynman Lectures on Physics</h2>
+            <p>
+              This is a beautifully written book, which is very entertaining to
+              read. This book is far from pop science, although it's as friendly
+              as possible when it comes to the math. Feynman uses the bare
+              minimum math required to explain whatever he wants to convey about
+              physics, and he has a lot to share. The book is replete with
+              Feynman's unique way of explaining things, so you won't always
+              encounter the typical explanations. Feynman's approach makes even
+              challenging topics appear simple and understandable. However, it's
+              important not to be misled. Don't think that this book will make
+              you into a person like Feynman, even if you have the aptitude for
+              it. The book merely shows you how Feynman was able to grasp
+              physics after much contemplation. He must have solved numerous
+              problems, many more than are included in this book. This book is
+              one that you will cherish and find entertaining rather than purely
+              instructive. This entertainment factor is the best motivation you
+              can receive. You will need every ounce of that motivation when you
+              delve into the rest of the books, as those will serve as your true
+              teachers.
+            </p>
+          </div>
+        </article>
+      </div>
+    </template>
 
-		<template>
-			<div class="shopping">
-				<h1>Shopping</h1>
-				<a href="https://www.theodinproject.com">The Odin Project</a>
-			</div>
-		</template>
+    <template>
+      <div class="shopping">
+        <h1>Shopping</h1>
+        <a href="https://www.theodinproject.com">The Odin Project</a>
+      </div>
+    </template>
 
-		<template>
-			<div class="cart">
-				<h1>Cart</h1>
-				<a href="https://www.theodinproject.com">The Odin Project</a>
-			</div>
-		</template>
-	</body>
+    <template>
+      <div class="cart">
+        <h1>Cart</h1>
+        <a href="https://www.theodinproject.com">The Odin Project</a>
+      </div>
+    </template>
+  </body>
 </html>
