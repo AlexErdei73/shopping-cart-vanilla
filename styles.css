@@ -36,6 +36,8 @@ nav li {
   flex: 0 1 15em;
   gap: 0.25em;
   background-color: rgb(0, 99, 99);
+  display: flex;
+  justify-content: center;
 }
 
 nav a {
@@ -126,6 +128,16 @@ main {
   width: 0;
   height: 0;
   overflow: hidden;
+}
+
+nav output {
+  background-color: darkslategray;
+  padding: 0.25em;
+  border-radius: 0.25em;
+}
+
+nav [href="#cart"] {
+  flex: 0 1 0;
 }
 
 @media (max-width: 35em) {
