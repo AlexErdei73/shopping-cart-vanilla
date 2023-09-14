@@ -103,6 +103,8 @@ main {
 .icon-cart {
   color: lightcyan;
   font-size: 1em;
+  position: relative;
+  top: 0.125em;
 }
 
 .icon-cart:hover {
