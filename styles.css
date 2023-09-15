@@ -1,259 +1,277 @@
 :root {
-	background-color: darkgray;
+  background-color: darkgray;
 }
 
 /* navigation bar */
 
 header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-color: rgb(0, 99, 99);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(0, 99, 99);
 }
 
 nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	color: white;
-	max-width: 100rem;
-	margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  max-width: 100rem;
+  margin: auto;
 }
 
 nav .logo {
-	min-width: max-content;
-	margin: 0 0 0 1em;
-	font-size: 1.5em;
-	text-align: left;
+  min-width: max-content;
+  margin: 0 0 0 1em;
+  font-size: 1.5em;
+  text-align: left;
 }
 
 nav ul {
-	flex: 1 1 45em;
-	display: flex;
-	justify-content: flex-end;
-	list-style: none;
-	padding: 0 1em;
+  flex: 1 1 45em;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0 1em;
 }
 
 nav li {
-	flex: 0 1 15em;
-	gap: 0.25em;
-	background-color: rgb(0, 99, 99);
-	display: flex;
-	justify-content: center;
+  flex: 0 1 15em;
+  gap: 0.25em;
+  background-color: rgb(0, 99, 99);
+  display: flex;
+  justify-content: center;
 }
 
 nav a {
-	display: block;
-	color: lightcyan;
-	font-size: 120%;
-	font-weight: 600;
-	border: none;
-	min-width: max-content;
-	width: 100%;
-	min-width: fit-content;
-	text-decoration: none;
-	text-align: center;
+  display: block;
+  color: lightcyan;
+  font-size: 120%;
+  font-weight: 600;
+  border: none;
+  min-width: max-content;
+  width: 100%;
+  min-width: fit-content;
+  text-decoration: none;
+  text-align: center;
 }
 
 nav a:hover {
-	color: white;
+  color: white;
 }
 
 nav #dropdown {
-	display: none;
-	background-color: rgb(0, 99, 99);
-	color: lightcyan;
-	font-size: 120%;
-	border: none;
-	min-width: max-content;
-	width: 100%;
-	min-width: fit-content;
+  display: none;
+  background-color: rgb(0, 99, 99);
+  color: lightcyan;
+  font-size: 120%;
+  border: none;
+  min-width: max-content;
+  width: 100%;
+  min-width: fit-content;
 }
 
 main {
-	margin: 3.5em auto 0;
-	max-width: 100rem;
+  margin: 3.5em auto 0;
+  max-width: 100rem;
 }
 
 .hidden {
-	display: none !important;
+  display: none !important;
 }
 
 #dropdown-menu {
-	margin: 0;
-	padding: 0;
-	position: fixed;
-	top: 1.65em;
-	right: 0;
-	width: max-content;
-	display: none;
-	flex-direction: column;
-	gap: 0.04em;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 1.65em;
+  right: 0;
+  width: max-content;
+  display: none;
+  flex-direction: column;
+  gap: 0.04em;
 }
 
 #dropdown-menu li {
-	flex-basis: 0;
+  flex-basis: 0;
 }
 
 .icon {
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	stroke-width: 0;
-	stroke: currentColor;
-	fill: currentColor;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
 
 .icon-cart {
-	color: lightcyan;
-	font-size: 1em;
-	position: relative;
-	top: 0.125em;
+  color: lightcyan;
+  font-size: 1em;
+  position: relative;
+  top: 0.125em;
 }
 
 .icon-cart:hover {
-	color: white;
+  color: white;
 }
 
 .icon-arrow_drop_down {
-	color: lightcyan;
-	position: relative;
-	top: 0.125em;
+  color: lightcyan;
+  position: relative;
+  top: 0.125em;
 }
 
 .icon-arrow_drop_down:hover {
-	color: white;
+  color: white;
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 0;
-	height: 0;
-	overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 nav output {
-	background-color: darkslategray;
-	padding: 0.25em;
-	border-radius: 0.25em;
+  background-color: darkslategray;
+  padding: 0.25em;
+  border-radius: 0.25em;
 }
 
 nav [href="#cart"] {
-	flex: 0 1 0;
+  flex: 0 1 0;
 }
 
 @media (max-width: 35em) {
-	nav .logo {
-		display: none;
-	}
+  nav .logo {
+    display: none;
+  }
 }
 
 @media (max-width: 18em) {
-	nav {
-		justify-content: flex-end;
-	}
-	nav ul {
-		display: none;
-	}
-	nav #dropdown {
-		display: block;
-		width: 1.3em;
-		border-radius: 50%;
-		border: 1px white solid;
-	}
+  nav {
+    justify-content: flex-end;
+  }
+  nav ul {
+    display: none;
+  }
+  nav #dropdown {
+    display: block;
+    width: 1.3em;
+    border-radius: 50%;
+    border: 1px white solid;
+  }
 
-	#dropdown-menu {
-		display: flex;
-	}
+  #dropdown-menu {
+    display: flex;
+  }
 
-	main {
-		margin-top: 2em;
-	}
+  main {
+    margin-top: 2em;
+  }
 }
 
 /* homepage */
 h1 {
-	margin: 0.5em;
-	font-size: 200%;
+  margin: 0.5em;
+  font-size: 200%;
 }
 
 .section-container {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .image-container {
-	width: 30%;
-	min-width: 10em;
-	padding: 0.5em;
-	flex-grow: 1;
+  width: 30%;
+  min-width: 10em;
+  padding: 0.5em;
+  flex-grow: 1;
 }
 
 .image-container img {
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .text-container {
-	width: 60%;
-	padding: 0.5em;
-	flex-grow: 1;
+  width: 60%;
+  padding: 0.5em;
+  flex-grow: 1;
 }
 
 h2 {
-	margin: 0;
+  margin: 0;
 }
 
 @media (max-width: 21em) {
-	h1 {
-		font-size: clamp(40%, 100%, 2vw);
-	}
+  h1 {
+    font-size: clamp(40%, 100%, 2vw);
+  }
 
-	.section-container {
-		font-size: clamp(20%, 50%, 1vw);
-	}
+  .section-container {
+    font-size: clamp(20%, 50%, 1vw);
+  }
 }
 
 /* book-card */
 
 .book-card {
-	width: 15em;
-	background-color: white;
-	padding-bottom: 1em;
+  width: 15em;
+  background-color: white;
+  padding-bottom: 1em;
+  overflow: hidden;
+}
+
+.book-card .image-container {
+  width: 100%;
+  background-color: black;
+  padding: 0;
+  min-width: none;
 }
 
 .book-card img {
-	width: 100%;
-	height: auto;
-	box-sizing: border-box;
-	border: 2px solid white;
+  height: 15em;
+  width: auto;
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+  border: 2px solid white;
 }
 
 .book-card .price {
-	margin: 1em;
-	padding-left: 1em;
+  margin: 1em;
+  padding-left: 1em;
 }
 
 .book-card .controlls {
-	display: flex;
-	justify-content: space-around;
-	margin: 1em;
+  display: flex;
+  justify-content: space-around;
+  margin: 1em;
 }
 
 .controlls input {
-	width: 3em;
+  width: 3em;
 }
 
 .controlls button {
-	padding: 0.5em;
-	background-color: dodgerblue;
-	color: white;
-	border: none;
-	border-radius: 0.25em;
+  padding: 0.5em;
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  border-radius: 0.25em;
 }
 
 .controlls button:hover {
-	background-color: rgb(21, 101, 181);
+  background-color: rgb(21, 101, 181);
+}
+
+/* books-container */
+#books-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
 }
