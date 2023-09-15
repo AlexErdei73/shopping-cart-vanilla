@@ -1,358 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script type="module" src="./index.js"></script>
-    <title>home page - Shopping Cart Vanilla</title>
-  </head>
-  <body>
-    <header>
-      <div
-        id="page-title-live-region"
-        class="visually-hidden"
-        aria-live="polite"
-      ></div>
-      <nav>
-        <a class="logo" href="/shopping-cart-vanilla">
-          <strong>Shopping Cart</strong>
-        </a>
-        <ul>
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#shopping">Shopping</a>
-          </li>
-          <li>
-            <a href="#cart" aria-labelledby="tag">
-              <svg class="icon icon-cart">
-                <use xlink:href="./images/icons.svg#icon-cart"></use>
-              </svg>
-              <span class="name visually-hidden"> cart </span>
-            </a>
-            <output>0</output>
-          </li>
-        </ul>
-        <button type="button" id="dropdown">
-          <svg class="icon icon-arrow_drop_down">
-            <use xlink:href="./images/icons.svg#icon-arrow_drop_down"></use>
-          </svg>
-          <span class="name visually-hidden"> dropdown menu </span>
-        </button>
-        <ul class="hidden" id="dropdown-menu">
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#shopping">Shopping</a>
-          </li>
-          <li>
-            <a href="#cart" aria-labelledby="tag">
-              <svg class="icon icon-cart">
-                <use xlink:href="./images/icons.svg#icon-cart"></use>
-              </svg>
-              <span class="name visually-hidden">cart</span>
-            </a>
-            <output>0</output>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main></main>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles.css" />
+		<script type="module" src="./index.js"></script>
+		<title>home page - Shopping Cart Vanilla</title>
+	</head>
+	<body>
+		<header>
+			<div
+				id="page-title-live-region"
+				class="visually-hidden"
+				aria-live="polite"
+			></div>
+			<nav>
+				<a class="logo" href="/shopping-cart-vanilla">
+					<strong>Shopping Cart</strong>
+				</a>
+				<ul>
+					<li>
+						<a href="#home">Home</a>
+					</li>
+					<li>
+						<a href="#shopping">Shopping</a>
+					</li>
+					<li>
+						<a href="#cart" aria-labelledby="tag">
+							<svg class="icon icon-cart">
+								<use xlink:href="./images/icons.svg#icon-cart"></use>
+							</svg>
+							<span class="name visually-hidden"> cart </span>
+						</a>
+						<output>0</output>
+					</li>
+				</ul>
+				<button type="button" id="dropdown">
+					<svg class="icon icon-arrow_drop_down">
+						<use xlink:href="./images/icons.svg#icon-arrow_drop_down"></use>
+					</svg>
+					<span class="name visually-hidden"> dropdown menu </span>
+				</button>
+				<ul class="hidden" id="dropdown-menu">
+					<li>
+						<a href="#home">Home</a>
+					</li>
+					<li>
+						<a href="#shopping">Shopping</a>
+					</li>
+					<li>
+						<a href="#cart" aria-labelledby="tag">
+							<svg class="icon icon-cart">
+								<use xlink:href="./images/icons.svg#icon-cart"></use>
+							</svg>
+							<span class="name visually-hidden">cart</span>
+						</a>
+						<output>0</output>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main></main>
 
-    <template>
-      <div class="home">
-        <article>
-          <h1>Undergraduate Physics Books Recommendation</h1>
-          <div class="section-container">
-            <div class="image-container">
-              <img src="./images/home/math.webp" alt="maths on blackboard" />
-            </div>
-            <div class="text-container">
-              <h2>Prerequisites</h2>
-              <p>
-                To excel in this subject, you should have a solid understanding
-                of secondary school-level physics and mathematics. Proficiency
-                in calculus, both single and multivariable functions, is
-                essential before embarking on your studies with these books.
-                Additionally, it is highly beneficial to supplement your
-                learning with online resources such as
-                <a
-                  href="https://www.youtube.com/channel/UCiEHVhv0SBMpP75JbzJShqw"
-                  >Walter Lewin's lectures</a
-                >
-                on experimental physics.
-              </p>
-              <h2>Mathematical Methods in the Physical Sciences</h2>
-              <p>
-                This classic textbook presents complex mathematical concepts in
-                the most accessible manner possible. It offers a plethora of
-                problems designed to equip you with the mathematical skills
-                required for undergraduate-level physics studies. It is
-                imperative that you diligently work through these problems to
-                fully grasp the material. Remember, there are no shortcuts, even
-                if you find the amount of practice overwhelming. This
-                foundational math knowledge is indispensable for tackling the
-                remainder of your physics coursework.
-              </p>
-              <h2>The Feynman Lectures on Physics</h2>
-              <p>
-                This is a beautifully written book, which is very entertaining
-                to read. This book is far from pop science, although it's as
-                friendly as possible when it comes to the math. Feynman uses the
-                bare minimum math required to explain whatever he wants to
-                convey about physics, and he has a lot to share. The book is
-                replete with Feynman's unique way of explaining things, so you
-                won't always encounter the typical explanations. Feynman's
-                approach makes even challenging topics appear simple and
-                understandable. However, it's important not to be misled. Don't
-                think that this book will make you into a person like Feynman,
-                even if you have the aptitude for it. The book merely shows you
-                how Feynman was able to grasp physics after much contemplation.
-                He must have solved numerous problems, many more than are
-                included in this book. This book is one that you will cherish
-                and find entertaining rather than purely instructive. This
-                entertainment factor is the best motivation you can receive. You
-                will need every ounce of that motivation when you delve into the
-                rest of the books, as those will serve as your true teachers.
-                The
-                <a href="https://www.feynmanlectures.caltech.edu/"
-                  >online version</a
-                >
-                is available as well.
-              </p>
-            </div>
-          </div>
-          <div class="section-container">
-            <div class="image-container">
-              <img
-                src="./images/home/classicalmechanics.jpeg"
-                alt="The Earth and the Moon"
-              />
-            </div>
-            <div class="text-container">
-              <h2>Classical Mechanics</h2>
-              <p>
-                Taylor's book is a pedagogical masterpiece. It will introduce
-                you to Classical mechanics in the manner you should know it for
-                your future studies. It won't overload you with excessive
-                information; instead, it focuses on providing you with the
-                essentials, which it accomplishes brilliantly. The book is
-                lengthy and detailed, offering a plethora of problems to solve.
-                These problems are consistently approachable and valuable.
-                Moreover, it presents computer problems that can help you
-                acquire basic programming skills for scientific applications.
-                This is an opportunity you shouldn't overlook. While the book is
-                verbose, its verbosity is paired with a high level of clarity.
-                Taylor's teaching style will effectively impart classical
-                mechanics knowledge, even if you are a student who may consider
-                themselves weaker but is eager to learn, much like myself. We
-                must acknowledge that the learning process can be overwhelming,
-                but Taylor not only imparts classical mechanics; he also guides
-                you in honing your fundamental mathematical skills, equipping
-                you for further studies. The reading is not particularly
-                difficult, but it may not be as entertaining as some other
-                texts. Taylor's explanations are thorough and conventional,
-                unlike Feynman's approach. The book is extremely practical but
-                may seem a bit dull, especially when compared to Feynman's more
-                engaging work.
-              </p>
-            </div>
-          </div>
-          <div class="section-container">
-            <div class="image-container">
-              <img
-                src="./images/home/electrodynamics.jpeg"
-                alt="Sparks from a Tesla-coil"
-              />
-            </div>
-            <div class="text-container">
-              <h2>Introduction to Electrodynamics</h2>
-              <p>
-                This book is to electrodynamics what Taylor's work is to
-                classical mechanics. The subject matter is mature and may not be
-                inherently entertaining at this level, but Griffiths' writing
-                style does its best to make it as enjoyable as possible.
-                Griffiths even infuses humor into the text, which can elicit
-                laughter at certain points. However, it's important to
-                understand that this book's primary purpose is not entertainment
-                but rather to guide you through the intricacies of
-                electrodynamics. The material presented is conventional, and the
-                book provides ample opportunities to practice the necessary
-                mathematics. Merely reading it is insufficient; you must also
-                work through the problems it presents. Fortunately, these
-                problems are quite solvable, serving as a valuable learning
-                resource.
-              </p>
-            </div>
-          </div>
-          <div class="section-container">
-            <div class="image-container">
-              <img src="./images/home/quantum.jpeg" alt="The quantum well" />
-            </div>
-            <div class="text-container">
-              <h2>Introduction to Quantum Mechanics</h2>
-              <p>
-                On the atomic scale, the laws governing nature are not those of
-                classical mechanics but rather the enigmatic realm of quantum
-                mechanics, which can be quite counter-intuitive. Our intuition
-                is largely shaped by macroscopic experiences, leaving us devoid
-                of any natural intuition when navigating the atomic and
-                subatomic world. Surprisingly, the mathematics underpinning
-                quantum mechanics is fairly straightforward. This book stands as
-                one of the most accessible resources for undergraduates delving
-                into this subject, effectively teaching both the requisite
-                mathematics and the practical aspects of quantum mechanics.
-                Notably, it does not delve into the history of the field or the
-                experimental evidence that led to the development of quantum
-                mechanics. It avoids imposing the Dirac bra-ket notation,instead
-                focusing on instructing readers on how to apply the Schrödinger
-                equation, an approach often termed "wave mechanics." This
-                approach remains foundational in theoretical chemistry and has
-                enduring relevance. However, the book doesn't shy away from
-                addressing the profound philosophical challenges associated with
-                interpreting the mathematical foundations of quantum mechanics,
-                providing a well-rounded understanding of the subject. Feynman
-                has a filmed lecture about this topic,
-                <a href="https://www.feynmanlectures.caltech.edu/fml.html#6">
-                  Probability and Uncertainty: the quantum mechanical view of
-                  nature </a
-                >.
-              </p>
-            </div>
-          </div>
-          <div class="section-container">
-            <div class="image-container">
-              <img src="./images/home/particle.jpeg" alt="Tunel in CERN" />
-            </div>
-            <div class="text-container">
-              <h2>Introduction to Elementary Particles</h2>
-              <p>
-                If you're intrigued by the intricacies of quantum mechanics at
-                the subatomic level, this is the ideal introductory book to
-                delve into. Be prepared, though, as you'll need the knowledge
-                acquired from Griffiths' Quantum Mechanics book to fully grasp
-                the content presented here. While this book will instruct you in
-                the art of Feynman diagrams, it's crucial to note that it does
-                not delve into quantum field theory. Thus, don't anticipate a
-                comprehensive exploration of how Feynman rules emerge from
-                fundamental principles. Instead, consider it a stepping stone—an
-                introduction rather than the full narrative.
-              </p>
-              <h2>Student-Friendly Quantum Field Theory</h2>
-              <p>
-                I can confidently recommend this book as the go-to resource for
-                undergraduate students looking to delve into the realm of
-                quantum field theory. While it offers a comprehensive
-                introduction to the subject, it specifically focuses on the
-                theory of electromagnetic interaction, known as quantum
-                electrodynamics. Quantum field theory is notorious for its
-                complexity and is traditionally reserved for graduate-level
-                studies, often spanning five years post-undergraduate education
-                to master. While this book may not be the definitive guide on
-                the topic, it unquestionably serves as the most ideal starting
-                point for your studies. The book provides in-depth calculations,
-                and as an added bonus, a solutions manual for the problems
-                within the book is readily available, making it an excellent
-                choice for self-study.
-              </p>
-            </div>
-          </div>
-          <div class="section-container">
-            <div class="image-container">
-              <img
-                src="./images/home/thermodynamics.webp"
-                alt="flame on match"
-              />
-            </div>
-            <div class="text-container">
-              <h2>Fundamentals of Statistical and Thermal Physics</h2>
-              <p>
-                This book serves as an essential guide for understanding how the
-                principles of classical and quantum mechanics can be applied to
-                systems comprising an immense number of particles. In theory, if
-                one possessed the initial state of all these particles, they
-                could calculate the system's state at any future time, adhering
-                to the laws of quantum mechanics. However, the practical
-                application of this approach is hindered by the vast number of
-                particles involved, necessitating additional assumptions and
-                methods for effective problem-solving. Remarkably, these
-                required assumptions have yet to be mathematically justified;
-                their validity is solely established by the success of the
-                theory in accurately describing experimental outcomes.
-                Nonetheless, a more profound issue known as the reversibility
-                paradox challenges this theory. The fundamental laws of physics
-                exhibit time-reversal symmetry, implying that every natural
-                process should, in theory, be capable of reversing in time
-                without violating physical laws. Consequently, if you were to
-                film a natural process and then play the film backward, the
-                process should remain consistent with the laws of physics.
-                Paradoxically, when observing the reversed process in a system
-                containing an extensive number of particles, it never occurs in
-                nature, despite being theoretically permissible. This raises the
-                question: Why doesn't this reversed process, which doesn't
-                violate the laws of physics, manifest in the natural world when
-                played backward on film? Feynman's relevant lecture is
-                <a href="https://www.feynmanlectures.caltech.edu/fml.html#5">
-                  The Distinction of Past and Future </a
-                >.
-              </p>
-            </div>
-          </div>
-          <div class="section-container">
-            <div class="image-container">
-              <img
-                src="./images/home/blackhole.webp"
-                alt="Balckhole pictures from 1978, 2016 and 2019"
-              />
-            </div>
-            <div class="text-container">
-              <h2>Relativity, Gravitation, and Cosmology</h2>
-              <p>
-                Quantum mechanics poses difficulties due to its stark contrast
-                with our intuitive understanding, primarily tailored for the
-                macroscopic world, while the theory of gravity presents its own
-                formidable challenges, largely rooted in its geometric nature.
-                Einstein employed differential geometry to express this theory,
-                a discipline that is itself intricate to learn, making general
-                relativity a rare sight in undergraduate curricula. If you seek
-                an initial introduction to Einstein's theory of relativity, this
-                book is your ideal starting point. Although it may not provide
-                an extensive set of exercises for mastering the theory, it
-                serves as the best foundational resource at the undergraduate
-                level.
-              </p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </template>
+		<template>
+			<div class="home">
+				<article>
+					<h1>Undergraduate Physics Books Recommendation</h1>
+					<div class="section-container">
+						<div class="image-container">
+							<img src="./images/home/math.webp" alt="maths on blackboard" />
+						</div>
+						<div class="text-container">
+							<h2>Prerequisites</h2>
+							<p>
+								To excel in this subject, you should have a solid understanding
+								of secondary school-level physics and mathematics. Proficiency
+								in calculus, both single and multivariable functions, is
+								essential before embarking on your studies with these books.
+								Additionally, it is highly beneficial to supplement your
+								learning with online resources such as
+								<a
+									href="https://www.youtube.com/channel/UCiEHVhv0SBMpP75JbzJShqw"
+									>Walter Lewin's lectures</a
+								>
+								on experimental physics.
+							</p>
+							<h2>Mathematical Methods in the Physical Sciences</h2>
+							<p>
+								This classic textbook presents complex mathematical concepts in
+								the most accessible manner possible. It offers a plethora of
+								problems designed to equip you with the mathematical skills
+								required for undergraduate-level physics studies. It is
+								imperative that you diligently work through these problems to
+								fully grasp the material. Remember, there are no shortcuts, even
+								if you find the amount of practice overwhelming. This
+								foundational math knowledge is indispensable for tackling the
+								remainder of your physics coursework.
+							</p>
+							<h2>The Feynman Lectures on Physics</h2>
+							<p>
+								This is a beautifully written book, which is very entertaining
+								to read. This book is far from pop science, although it's as
+								friendly as possible when it comes to the math. Feynman uses the
+								bare minimum math required to explain whatever he wants to
+								convey about physics, and he has a lot to share. The book is
+								replete with Feynman's unique way of explaining things, so you
+								won't always encounter the typical explanations. Feynman's
+								approach makes even challenging topics appear simple and
+								understandable. However, it's important not to be misled. Don't
+								think that this book will make you into a person like Feynman,
+								even if you have the aptitude for it. The book merely shows you
+								how Feynman was able to grasp physics after much contemplation.
+								He must have solved numerous problems, many more than are
+								included in this book. This book is one that you will cherish
+								and find entertaining rather than purely instructive. This
+								entertainment factor is the best motivation you can receive. You
+								will need every ounce of that motivation when you delve into the
+								rest of the books, as those will serve as your true teachers.
+								The
+								<a href="https://www.feynmanlectures.caltech.edu/"
+									>online version</a
+								>
+								is available as well.
+							</p>
+						</div>
+					</div>
+					<div class="section-container">
+						<div class="image-container">
+							<img
+								src="./images/home/classicalmechanics.jpeg"
+								alt="The Earth and the Moon"
+							/>
+						</div>
+						<div class="text-container">
+							<h2>Classical Mechanics</h2>
+							<p>
+								Taylor's book is a pedagogical masterpiece. It will introduce
+								you to Classical mechanics in the manner you should know it for
+								your future studies. It won't overload you with excessive
+								information; instead, it focuses on providing you with the
+								essentials, which it accomplishes brilliantly. The book is
+								lengthy and detailed, offering a plethora of problems to solve.
+								These problems are consistently approachable and valuable.
+								Moreover, it presents computer problems that can help you
+								acquire basic programming skills for scientific applications.
+								This is an opportunity you shouldn't overlook. While the book is
+								verbose, its verbosity is paired with a high level of clarity.
+								Taylor's teaching style will effectively impart classical
+								mechanics knowledge, even if you are a student who may consider
+								themselves weaker but is eager to learn, much like myself. We
+								must acknowledge that the learning process can be overwhelming,
+								but Taylor not only imparts classical mechanics; he also guides
+								you in honing your fundamental mathematical skills, equipping
+								you for further studies. The reading is not particularly
+								difficult, but it may not be as entertaining as some other
+								texts. Taylor's explanations are thorough and conventional,
+								unlike Feynman's approach. The book is extremely practical but
+								may seem a bit dull, especially when compared to Feynman's more
+								engaging work.
+							</p>
+						</div>
+					</div>
+					<div class="section-container">
+						<div class="image-container">
+							<img
+								src="./images/home/electrodynamics.jpeg"
+								alt="Sparks from a Tesla-coil"
+							/>
+						</div>
+						<div class="text-container">
+							<h2>Introduction to Electrodynamics</h2>
+							<p>
+								This book is to electrodynamics what Taylor's work is to
+								classical mechanics. The subject matter is mature and may not be
+								inherently entertaining at this level, but Griffiths' writing
+								style does its best to make it as enjoyable as possible.
+								Griffiths even infuses humor into the text, which can elicit
+								laughter at certain points. However, it's important to
+								understand that this book's primary purpose is not entertainment
+								but rather to guide you through the intricacies of
+								electrodynamics. The material presented is conventional, and the
+								book provides ample opportunities to practice the necessary
+								mathematics. Merely reading it is insufficient; you must also
+								work through the problems it presents. Fortunately, these
+								problems are quite solvable, serving as a valuable learning
+								resource.
+							</p>
+						</div>
+					</div>
+					<div class="section-container">
+						<div class="image-container">
+							<img src="./images/home/quantum.jpeg" alt="The quantum well" />
+						</div>
+						<div class="text-container">
+							<h2>Introduction to Quantum Mechanics</h2>
+							<p>
+								On the atomic scale, the laws governing nature are not those of
+								classical mechanics but rather the enigmatic realm of quantum
+								mechanics, which can be quite counter-intuitive. Our intuition
+								is largely shaped by macroscopic experiences, leaving us devoid
+								of any natural intuition when navigating the atomic and
+								subatomic world. Surprisingly, the mathematics underpinning
+								quantum mechanics is fairly straightforward. This book stands as
+								one of the most accessible resources for undergraduates delving
+								into this subject, effectively teaching both the requisite
+								mathematics and the practical aspects of quantum mechanics.
+								Notably, it does not delve into the history of the field or the
+								experimental evidence that led to the development of quantum
+								mechanics. It avoids imposing the Dirac bra-ket notation,instead
+								focusing on instructing readers on how to apply the Schrödinger
+								equation, an approach often termed "wave mechanics." This
+								approach remains foundational in theoretical chemistry and has
+								enduring relevance. However, the book doesn't shy away from
+								addressing the profound philosophical challenges associated with
+								interpreting the mathematical foundations of quantum mechanics,
+								providing a well-rounded understanding of the subject. Feynman
+								has a filmed lecture about this topic,
+								<a href="https://www.feynmanlectures.caltech.edu/fml.html#6">
+									Probability and Uncertainty: the quantum mechanical view of
+									nature </a
+								>.
+							</p>
+						</div>
+					</div>
+					<div class="section-container">
+						<div class="image-container">
+							<img src="./images/home/particle.jpeg" alt="Tunel in CERN" />
+						</div>
+						<div class="text-container">
+							<h2>Introduction to Elementary Particles</h2>
+							<p>
+								If you're intrigued by the intricacies of quantum mechanics at
+								the subatomic level, this is the ideal introductory book to
+								delve into. Be prepared, though, as you'll need the knowledge
+								acquired from Griffiths' Quantum Mechanics book to fully grasp
+								the content presented here. While this book will instruct you in
+								the art of Feynman diagrams, it's crucial to note that it does
+								not delve into quantum field theory. Thus, don't anticipate a
+								comprehensive exploration of how Feynman rules emerge from
+								fundamental principles. Instead, consider it a stepping stone—an
+								introduction rather than the full narrative.
+							</p>
+							<h2>Student-Friendly Quantum Field Theory</h2>
+							<p>
+								I can confidently recommend this book as the go-to resource for
+								undergraduate students looking to delve into the realm of
+								quantum field theory. While it offers a comprehensive
+								introduction to the subject, it specifically focuses on the
+								theory of electromagnetic interaction, known as quantum
+								electrodynamics. Quantum field theory is notorious for its
+								complexity and is traditionally reserved for graduate-level
+								studies, often spanning five years post-undergraduate education
+								to master. While this book may not be the definitive guide on
+								the topic, it unquestionably serves as the most ideal starting
+								point for your studies. The book provides in-depth calculations,
+								and as an added bonus, a solutions manual for the problems
+								within the book is readily available, making it an excellent
+								choice for self-study.
+							</p>
+						</div>
+					</div>
+					<div class="section-container">
+						<div class="image-container">
+							<img
+								src="./images/home/thermodynamics.webp"
+								alt="flame on match"
+							/>
+						</div>
+						<div class="text-container">
+							<h2>Fundamentals of Statistical and Thermal Physics</h2>
+							<p>
+								This book serves as an essential guide for understanding how the
+								principles of classical and quantum mechanics can be applied to
+								systems comprising an immense number of particles. In theory, if
+								one possessed the initial state of all these particles, they
+								could calculate the system's state at any future time, adhering
+								to the laws of quantum mechanics. However, the practical
+								application of this approach is hindered by the vast number of
+								particles involved, necessitating additional assumptions and
+								methods for effective problem-solving. Remarkably, these
+								required assumptions have yet to be mathematically justified;
+								their validity is solely established by the success of the
+								theory in accurately describing experimental outcomes.
+								Nonetheless, a more profound issue known as the reversibility
+								paradox challenges this theory. The fundamental laws of physics
+								exhibit time-reversal symmetry, implying that every natural
+								process should, in theory, be capable of reversing in time
+								without violating physical laws. Consequently, if you were to
+								film a natural process and then play the film backward, the
+								process should remain consistent with the laws of physics.
+								Paradoxically, when observing the reversed process in a system
+								containing an extensive number of particles, it never occurs in
+								nature, despite being theoretically permissible. This raises the
+								question: Why doesn't this reversed process, which doesn't
+								violate the laws of physics, manifest in the natural world when
+								played backward on film? Feynman's relevant lecture is
+								<a href="https://www.feynmanlectures.caltech.edu/fml.html#5">
+									The Distinction of Past and Future </a
+								>.
+							</p>
+						</div>
+					</div>
+					<div class="section-container">
+						<div class="image-container">
+							<img
+								src="./images/home/blackhole.webp"
+								alt="Balckhole pictures from 1978, 2016 and 2019"
+							/>
+						</div>
+						<div class="text-container">
+							<h2>Relativity, Gravitation, and Cosmology</h2>
+							<p>
+								Quantum mechanics poses difficulties due to its stark contrast
+								with our intuitive understanding, primarily tailored for the
+								macroscopic world, while the theory of gravity presents its own
+								formidable challenges, largely rooted in its geometric nature.
+								Einstein employed differential geometry to express this theory,
+								a discipline that is itself intricate to learn, making general
+								relativity a rare sight in undergraduate curricula. If you seek
+								an initial introduction to Einstein's theory of relativity, this
+								book is your ideal starting point. Although it may not provide
+								an extensive set of exercises for mastering the theory, it
+								serves as the best foundational resource at the undergraduate
+								level.
+							</p>
+						</div>
+					</div>
+				</article>
+			</div>
+		</template>
 
-    <template>
-      <div class="shopping">
-        <h1>Shopping</h1>
-        <div class="book-card">
-          <img
-            src="./images/books/boas.b08a50df.jpeg"
-            alt="Mathematical Methods In The Physical Sciences book cover"
-          />
-          <div id="price">£<output>0</output></div>
-          <div class="controlls">
-            <input type="number" value="0" />
-            <button type="button">Buy Me!</button>
-          </div>
-        </div>
-      </div>
-    </template>
+		<template>
+			<div class="shopping">
+				<h1>Shopping</h1>
+				<div class="book-card">
+					<img
+						src="./images/books/boas.b08a50df.jpeg"
+						alt="Mathematical Methods In The Physical Sciences book cover"
+					/>
+					<div class="price">£<output>0</output></div>
+					<div class="controlls">
+						<input type="number" value="0" />
+						<button type="button">Buy Me!</button>
+					</div>
+				</div>
+			</div>
+		</template>
 
-    <template>
-      <div class="cart">
-        <h1>Cart</h1>
-        <a href="https://www.theodinproject.com">The Odin Project</a>
-      </div>
-    </template>
-  </body>
+		<template>
+			<div class="cart">
+				<h1>Cart</h1>
+				<a href="https://www.theodinproject.com">The Odin Project</a>
+			</div>
+		</template>
+	</body>
 </html>
