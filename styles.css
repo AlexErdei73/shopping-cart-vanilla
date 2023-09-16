@@ -2,8 +2,11 @@
   background-color: darkgray;
 }
 
-/* navigation bar */
+body {
+  margin: 0;
+}
 
+/* navigation bar */
 header {
   position: fixed;
   top: 0;
@@ -85,7 +88,7 @@ main {
   margin: 0;
   padding: 0;
   position: fixed;
-  top: 1.65em;
+  top: 1.525rem;
   right: 0;
   width: max-content;
   display: none;
@@ -166,10 +169,11 @@ nav [href="#cart"] {
 
   #dropdown-menu {
     display: flex;
+    font-size: min(100%, 2vw);
   }
 
   main {
-    margin-top: 2em;
+    margin-top: 1.5em;
   }
 }
 
@@ -212,16 +216,15 @@ h2 {
 
 @media (max-width: 21em) {
   h1 {
-    font-size: clamp(40%, 100%, 2vw);
+    font-size: min(200%, 2vw);
   }
 
   .section-container {
-    font-size: clamp(20%, 50%, 1vw);
+    font-size: min(100%, 1vw);
   }
 }
 
 /* book-card */
-
 .book-card {
   width: 15em;
   background-color: white;
@@ -232,9 +235,10 @@ h2 {
 
 .book-card .image-container {
   width: 100%;
+  max-width: 100%;
   background-color: black;
   padding: 0;
-  min-width: none;
+  min-width: 0;
 }
 
 .book-card img {
@@ -279,4 +283,16 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+}
+
+@media (max-width: 17em) {
+  .book-card img {
+    height: min(15em, 90vw);
+  }
+
+  .book-card,
+  .book-card input,
+  .book-card button {
+    font-size: min(100%, 2vw);
+  }
 }
