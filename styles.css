@@ -76,7 +76,7 @@ nav #dropdown {
 }
 
 main {
-  margin: 3.5em auto 0;
+  margin: 3.7em auto 0;
   max-width: 100rem;
 }
 
@@ -88,7 +88,7 @@ main {
   margin: 0;
   padding: 0;
   position: fixed;
-  top: 1.525rem;
+  top: 1.61rem;
   right: 0;
   width: max-content;
   display: none;
@@ -169,11 +169,11 @@ nav [href="#cart"] {
 
   #dropdown-menu {
     display: flex;
-    font-size: min(100%, 2vw);
+    font-size: clamp(32px, 2vw, 1em);
   }
 
   main {
-    margin-top: 1.5em;
+    margin-top: 1.515rem;
   }
 }
 
@@ -216,11 +216,11 @@ h2 {
 
 @media (max-width: 21em) {
   h1 {
-    font-size: min(200%, 2vw);
+    font-size: clamp(24px, 2vw, 2em);
   }
 
   .section-container {
-    font-size: min(100%, 1vw);
+    font-size: clamp(16px, 1vw, 1em);
   }
 }
 
@@ -293,6 +293,6 @@ h2 {
   .book-card,
   .book-card input,
   .book-card button {
-    font-size: min(100%, 2vw);
+    font-size: clamp(12px, 2vw, 1em);
   }
 }
