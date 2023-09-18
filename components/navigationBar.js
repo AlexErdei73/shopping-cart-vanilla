@@ -6,6 +6,7 @@ function navigationBarFactory() {
 
   const components = ["home", "shopping", "cart"];
   const nodes = [];
+  let nodesToAppendStored;
 
   const templates = document.querySelectorAll("template");
   templates.forEach((temp, i) => {
@@ -17,9 +18,14 @@ function navigationBarFactory() {
   function updateDOM(index, nodesToAppend) {
     const childNode = mainNode.childNodes[0];
     if (childNode) childNode.remove();
-    if (nodesToAppend[index]) nodes[index].appendChild(nodesToAppend[index]);
     mainNode.appendChild(nodes[index]);
-
+    console.log("updateDOM runs, index: ", index);
+    console.log(nodesToAppend[index]);
+    if (nodesToAppend[index]) {
+      nodes[index].appendChild(nodesToAppend[index]);
+      nodesToAppend[index] = null;
+      console.log("if branch has run");
+    }
     const title = `${components[index]} page - Shopping Cart Vanilla`;
     titleNode.textContent = title;
     pageTitleLiveRegion.textContent = title;
@@ -36,10 +42,12 @@ function navigationBarFactory() {
     }
   }
 
-  function showMainElement(nodesToAppend) {
+  function showMainElement(nodesToAppend = []) {
+    console.log(nodesToAppend);
+    if (nodesToAppend.length > 0) nodesToAppendStored = nodesToAppend;
     const component = window.location.hash.slice(1) || components[0];
     const index = components.indexOf(component);
-    updateDOM(index, nodesToAppend);
+    updateDOM(index, nodesToAppendStored);
   }
 
   dropdownButton.addEventListener("click", handleDropdownButtonClick);
