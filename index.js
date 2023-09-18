@@ -80,33 +80,5 @@ const state = {
 	totalPrice: 0,
 };
 
-function getZoom() {
-	const div = document.createElement("div");
-	div.style = "font-size: 16px";
-	document.body.appendChild(div);
-	const computedFontSize = window
-		.getComputedStyle(div)
-		.getPropertyValue("font-size");
-	const indexPx = computedFontSize.indexOf("px");
-	const zoom = +computedFontSize.slice(0, indexPx) / 16;
-	div.remove();
-	return zoom;
-}
-
-function getBaseFontsize() {
-	const zoom = getZoom();
-	const totalFontSizeStr = window
-		.getComputedStyle(document.documentElement)
-		.getPropertyValue("font-size");
-	const indexPx = totalFontSizeStr.indexOf("px");
-	const totalFontSize = +totalFontSizeStr.slice(0, indexPx);
-	return totalFontSize / zoom;
-}
-
-const root = document.querySelector(":root");
-root.style = `--total-zoom: ${
-	(getBaseFontsize() * getZoom()) / 16
-}; --zoom: ${getZoom()}`;
-
 const bookCards = bookCardsFactory(state);
 navigationBar.showMainElement([null, bookCards.node, null]);
