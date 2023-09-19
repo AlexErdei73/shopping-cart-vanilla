@@ -1,5 +1,6 @@
 import navigationBar from "./components/navigationBar.js";
 import bookCardsFactory from "./components/bookCards.js";
+import tableFactory from "./components/table.js";
 
 const state = {
 	books: [
@@ -81,4 +82,5 @@ const state = {
 };
 
 const bookCards = bookCardsFactory(state);
-navigationBar.showMainElement([null, bookCards.node, null]);
+const table = tableFactory(state);
+navigationBar.showMainElement([null, bookCards.node, table.node], table);
