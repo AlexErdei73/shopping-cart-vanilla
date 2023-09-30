@@ -1,49 +1,59 @@
 function tableFactory(state) {
-	const temps = document.querySelectorAll("template");
-	const tableRowTemp = temps[4];
-	const node = document.createElement("table");
-	const headRowTemp = temps[6];
-	const headRow = headRowTemp.content.querySelector("tr");
-	const headRowNode = document.importNode(headRow, true);
-	const lastRowTemp = temps[5];
-	const lastRow = lastRowTemp.content.querySelector("tr");
-	const lastRowNode = document.importNode(lastRow, true);
-	node.appendChild(headRowNode);
-	let tableRows = [];
+  const temps = document.querySelectorAll("template");
+  const tableRowTemp = temps[4];
+  const node = document.createElement("div");
+  node.classList.add("table-container");
+  const tableNode = document.createElement("table");
+  node.appendChild(tableNode);
+  const headRowTemp = temps[6];
+  const headRow = headRowTemp.content.querySelector("tr");
+  const headRowNode = document.importNode(headRow, true);
+  const lastRowTemp = temps[5];
+  const lastRow = lastRowTemp.content.querySelector("tr");
+  const lastRowNode = document.importNode(lastRow, true);
+  tableNode.appendChild(headRowNode);
+  let tableRows = [];
+  const buttonContainer = document.createElement("div");
+  buttonContainer.classList.add("button-container");
+  const button = document.createElement("button");
+  button.setAttribute("type", "button");
+  button.textContent = "Pay Now";
+  buttonContainer.appendChild(button);
+  node.appendChild(buttonContainer);
 
-	function render() {
-		removeNodes();
-		state.books
-			.filter((book) => book.number > 0)
-			.forEach((book) => {
-				const tableRow = tableRowTemp.content.querySelector("tr");
-				const tableRowNode = document.importNode(tableRow, true);
-				for (let key in book) {
-					const dataNode = tableRowNode.querySelector("." + key.toLowerCase());
-					if (dataNode) {
-						dataNode.textContent = book[key];
-					}
-				}
-				tableRows.push(tableRowNode);
-			});
-		const totalPriceNode = lastRowNode.querySelector(".totalprice");
-		totalPriceNode.textContent = state.totalPrice.toFixed(2);
-		tableRows.push(lastRowNode);
-		appendRows();
-	}
+  function render() {
+    removeNodes();
+    state.books
+      .filter((book) => book.number > 0)
+      .forEach((book) => {
+        const tableRow = tableRowTemp.content.querySelector("tr");
+        const tableRowNode = document.importNode(tableRow, true);
+        for (let key in book) {
+          const dataNode = tableRowNode.querySelector("." + key.toLowerCase());
+          if (dataNode) {
+            dataNode.textContent = book[key];
+          }
+        }
+        tableRows.push(tableRowNode);
+      });
+    const totalPriceNode = lastRowNode.querySelector(".totalprice");
+    totalPriceNode.textContent = state.totalPrice.toFixed(2);
+    tableRows.push(lastRowNode);
+    appendRows();
+  }
 
-	function removeNodes() {
-		tableRows.forEach((rowNode) => {
-			rowNode.remove();
-		});
-		tableRows = [];
-	}
+  function removeNodes() {
+    tableRows.forEach((rowNode) => {
+      rowNode.remove();
+    });
+    tableRows = [];
+  }
 
-	function appendRows() {
-		tableRows.forEach((rowNode) => node.appendChild(rowNode));
-	}
+  function appendRows() {
+    tableRows.forEach((rowNode) => tableNode.appendChild(rowNode));
+  }
 
-	return { node, render };
+  return { node, render };
 }
 
 export default tableFactory;
