@@ -23,7 +23,7 @@ function bookCardFactory(bookState, parent) {
 				bookState.totalPrice = 0;
 				buyMeButton.textContent = "Buy Me!";
 			}
-			parent.updateNumber();
+			parent.updateAll();
 		});
 	}
 

@@ -298,8 +298,16 @@ h2 {
 }
 
 /* cart */
+div.cart {
+	min-height: 100vh;
+	background-color: white;
+}
+
 table {
 	width: 100%;
+	max-width: 50em;
+	margin: auto;
+	border-collapse: collapse;
 }
 
 th,

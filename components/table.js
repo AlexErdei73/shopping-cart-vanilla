@@ -5,28 +5,30 @@ function tableFactory(state) {
 	const headRowTemp = temps[6];
 	const headRow = headRowTemp.content.querySelector("tr");
 	const headRowNode = document.importNode(headRow, true);
+	const lastRowTemp = temps[5];
+	const lastRow = lastRowTemp.content.querySelector("tr");
+	const lastRowNode = document.importNode(lastRow, true);
 	node.appendChild(headRowNode);
 	let tableRows = [];
 
 	function render() {
-		console.log("render runs");
 		removeNodes();
 		state.books
 			.filter((book) => book.number > 0)
 			.forEach((book) => {
 				const tableRow = tableRowTemp.content.querySelector("tr");
 				const tableRowNode = document.importNode(tableRow, true);
-				console.log(book);
 				for (let key in book) {
 					const dataNode = tableRowNode.querySelector("." + key.toLowerCase());
-					console.log(dataNode);
-					console.log(book[key]);
 					if (dataNode) {
 						dataNode.textContent = book[key];
 					}
 				}
 				tableRows.push(tableRowNode);
 			});
+		const totalPriceNode = lastRowNode.querySelector(".totalprice");
+		totalPriceNode.textContent = state.totalPrice.toFixed(2);
+		tableRows.push(lastRowNode);
 		appendRows();
 	}
 
