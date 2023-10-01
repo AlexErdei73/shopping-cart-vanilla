@@ -164,16 +164,18 @@ nav [href="#cart"] {
     display: block;
     width: 1.3em;
     border-radius: 50%;
+    font-size: min(32px, 1em);
     border: 1px white solid;
   }
 
   #dropdown-menu {
     display: flex;
-    font-size: clamp(32px, 2vw, 1em);
+    font-size: clamp(32px, 10vw, 2em);
+    top: min(75px, 2.35rem);
   }
 
   main {
-    margin-top: 1.515rem;
+    margin-top: min(75px, 2.35rem);
   }
 }
 
@@ -333,4 +335,11 @@ button {
 
 button:hover {
   background-color: rgb(0, 89, 255);
+}
+
+@media (max-width: 35em) {
+  th,
+  td {
+    font-size: clamp(12px, 2vw, 1em);
+  }
 }
