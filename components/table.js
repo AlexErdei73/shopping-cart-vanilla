@@ -22,7 +22,7 @@ function tableFactory(state) {
   button.textContent = "Pay Now";
   buttonContainer.appendChild(button);
   node.appendChild(buttonContainer);
-  const modal = modalFactory("Secure Payment", 7);
+  const modal = modalFactory("Thank you for shopping!", 7);
   const okButton = document.querySelector(".modal-body button");
 
   okButton.addEventListener("click", modal.closeModal);
