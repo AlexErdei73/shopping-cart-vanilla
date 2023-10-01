@@ -63,6 +63,18 @@
     </header>
     <main></main>
 
+    <div class="cover">
+      <dialog>
+        <div class="head">
+          <button type="button" class="close" aria-labelledby="tac">X</button>
+          <span id="tac" hidden> Close </span>
+          <output></output>
+        </div>
+        <div class="body"></div>
+      </dialog>
+    </div>
+
+    <!-- Home -->
     <template>
       <div class="home">
         <article>
@@ -331,18 +343,21 @@
       </div>
     </template>
 
+    <!-- Shopping -->
     <template>
       <div class="shopping">
         <h1>Shopping</h1>
       </div>
     </template>
 
+    <!-- Cart -->
     <template>
       <div class="cart">
         <h1>Cart</h1>
       </div>
     </template>
 
+    <!-- BookCard -->
     <template>
       <div class="book-card">
         <div class="image-container">
@@ -359,6 +374,7 @@
       </div>
     </template>
 
+    <!-- TableLine -->
     <template>
       <tr>
         <td class="author"></td>
@@ -369,6 +385,7 @@
       </tr>
     </template>
 
+    <!-- TableLastLine -->
     <template>
       <tr>
         <td colspan="4"></td>
@@ -376,6 +393,7 @@
       </tr>
     </template>
 
+    <!-- TableHeadLine -->
     <template>
       <tr>
         <th>Author</th>
@@ -384,6 +402,16 @@
         <th>Number</th>
         <th>Total Price</th>
       </tr>
+    </template>
+
+    <!-- ModalBody -->
+    <template>
+      <div class="modal-body">
+        <p>This is just demonstration!</p>
+        <div class="button-container">
+          <button type="button">OK</button>
+        </div>
+      </div>
     </template>
   </body>
 </html>

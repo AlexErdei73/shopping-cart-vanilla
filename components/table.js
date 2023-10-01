@@ -1,3 +1,5 @@
+import modalFactory from "./modal.js";
+
 function tableFactory(state) {
   const temps = document.querySelectorAll("template");
   const tableRowTemp = temps[4];
@@ -20,6 +22,10 @@ function tableFactory(state) {
   button.textContent = "Pay Now";
   buttonContainer.appendChild(button);
   node.appendChild(buttonContainer);
+  const modal = modalFactory("Secure Payment", 7);
+  const okButton = document.querySelector(".modal-body button");
+
+  okButton.addEventListener("click", modal.closeModal);
 
   function render() {
     removeNodes();
@@ -52,6 +58,8 @@ function tableFactory(state) {
   function appendRows() {
     tableRows.forEach((rowNode) => tableNode.appendChild(rowNode));
   }
+
+  button.addEventListener("click", modal.openModal);
 
   return { node, render };
 }
