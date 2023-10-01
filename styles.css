@@ -1,5 +1,13 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./font/Roboto-Black.ttf") format("ttf"),
+    url("./font/Roboto-BlackItalic.ttf") format("ttf"),
+    url("./font/Roboto-Bold.ttf") format("ttf");
+}
+
 :root {
   background-color: darkgray;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -16,7 +24,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: dodgerblue;
+  background-color: rgb(24, 151, 173);
 }
 
 nav {
@@ -46,7 +54,7 @@ nav ul {
 nav li {
   flex: 0 1 15em;
   gap: 0.25em;
-  background-color: dodgerblue;
+  background-color: rgb(24, 151, 173);
   display: flex;
   justify-content: center;
 }
@@ -55,7 +63,7 @@ nav a {
   display: block;
   color: lightcyan;
   font-size: 120%;
-  font-weight: 600;
+  font-weight: 400;
   border: none;
   min-width: max-content;
   width: 100%;
@@ -70,7 +78,7 @@ nav a:hover {
 
 nav #dropdown {
   display: none;
-  background-color: dodgerblue;
+  background-color: rgb(24, 151, 173);
   color: lightcyan;
   font-size: 120%;
   border: none;
@@ -142,7 +150,7 @@ main {
 }
 
 nav output {
-  background-color: darkslategray;
+  background-color: #555555;
   padding: 0.25em;
   border-radius: 0.25em;
 }
@@ -154,6 +162,10 @@ nav [href="#cart"] {
 @media (max-width: 35em) {
   nav .logo {
     display: none;
+  }
+
+  article {
+    margin: 0 !important;
   }
 }
 
@@ -188,9 +200,19 @@ nav [href="#cart"] {
   background-color: white;
 }
 
+article {
+  padding-top: 0.5rem;
+  margin-right: 10rem;
+}
+
 h1 {
-  margin: 0.5em;
+  margin: 0.5em 0 3rem 0.5rem;
   font-size: 200%;
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 400;
 }
 
 .section-container {
@@ -420,6 +442,12 @@ hr {
 .modal-body .button-container {
   display: flex;
   justify-content: flex-end;
+}
+
+@media (max-width: 18em) {
+  dialog .head {
+    font-size: clamp(16px, 5vw, 1.2rem) !important;
+  }
 }
 
 .animate {
