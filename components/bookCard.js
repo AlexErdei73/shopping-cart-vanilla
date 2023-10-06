@@ -1,4 +1,4 @@
-function bookCardFactory(bookState, parent) {
+function bookCardFactory(bookData, parent) {
 	const temp = document.querySelectorAll("template")[3];
 	const bookCard = temp.content.querySelector(".book-card");
 	const node = document.importNode(bookCard, true);
@@ -9,18 +9,18 @@ function bookCardFactory(bookState, parent) {
 	const buyMeButton = node.querySelector(".book-card button");
 
 	function init() {
-		bookImg.src = bookState.pictureURL;
-		bookImg.alt = `${bookState.title} cover picture`;
-		priceOutputNode.textContent = bookState.unitPrice;
+		bookImg.src = bookData.pictureURL;
+		bookImg.alt = `${bookData.title} cover picture`;
+		priceOutputNode.textContent = bookData.unitPrice;
 
 		buyMeButton.addEventListener("click", function () {
 			if (buyMeButton.textContent === "Buy Me!") {
-				bookState.number = +bookNumberInput.value;
-				bookState.totalPrice = +bookNumberInput.value * bookState.unitPrice;
+				bookData.number = +bookNumberInput.value;
+				bookData.totalPrice = +bookNumberInput.value * bookData.unitPrice;
 				buyMeButton.textContent = "Remove";
 			} else {
-				bookState.number = 0;
-				bookState.totalPrice = 0;
+				bookData.number = 0;
+				bookData.totalPrice = 0;
 				buyMeButton.textContent = "Buy Me!";
 			}
 			parent.updateAll();
