@@ -1,6 +1,7 @@
 import bookCardFactory from "./bookCard.js";
 
-function bookCardsFactory(state) {
+function bookCardsFactory(state, table) {
+	const shoppingNode = document.querySelector(".shopping");
 	const node = document.createElement("div");
 	node.id = "books-container";
 	const totalNumberOutputNodes = document.querySelectorAll("nav output");
@@ -23,17 +24,19 @@ function bookCardsFactory(state) {
 	function updateAll() {
 		updateNumber();
 		updateTotalPrice();
+		table.render();
 	}
 
 	const bookCards = [];
 
-	const instance = { node, updateAll };
+	const instance = { updateAll };
 	state.books.forEach((bookState, i) => {
 		const bookCard = bookCardFactory(bookState, instance);
 		bookCard.init();
 		bookCards[i] = bookCard;
 		node.appendChild(bookCard.node);
 	});
+	shoppingNode.appendChild(node);
 
 	return instance;
 }
