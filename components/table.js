@@ -25,8 +25,30 @@ function tableFactory(appData) {
   const modal = modalFactory("Thank you for shopping!", 7);
   const okButton = document.querySelector(".modal-body button");
   const cartNode = document.querySelector(".cart");
+  const totalNumberOutputNodes = document.querySelectorAll("nav output");
 
   okButton.addEventListener("click", modal.closeModal);
+
+  function updateNumber() {
+    appData.totalNumber = appData.books
+      .map((book) => book.number)
+      .reduce((prevNumber, number) => prevNumber + number, 0);
+    totalNumberOutputNodes.forEach((outputNode) => {
+      outputNode.textContent = appData.totalNumber;
+    });
+  }
+
+  function updateTotalPrice() {
+    appData.totalPrice = appData.books
+      .map((book) => book.totalPrice)
+      .reduce((prevPrice, price) => prevPrice + price, 0);
+  }
+
+  function updateAll() {
+    updateNumber();
+    updateTotalPrice();
+    render();
+  }
 
   function render() {
     removeNodes();
@@ -41,6 +63,14 @@ function tableFactory(appData) {
             if (key === "number") {
               const input = dataNode.querySelector("input");
               input.value = book[key];
+              const button = dataNode.querySelector("button");
+              button.id = appData.books.indexOf(book);
+              button.addEventListener("click", function (event) {
+                const index = +event.target.id;
+                appData.books[index].number = 0;
+                appData.books[index].totalPrice = 0;
+                updateAll();
+              });
             } else dataNode.textContent = book[key];
           }
         }
@@ -66,7 +96,7 @@ function tableFactory(appData) {
   button.addEventListener("click", modal.openModal);
 
   cartNode.appendChild(node);
-  return { render };
+  return { render, updateAll };
 }
 
 export default tableFactory;
