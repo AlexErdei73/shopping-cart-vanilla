@@ -458,6 +458,17 @@ hr {
   animation: 600ms reverse slideIn;
 }
 
+td button {
+  padding: 0.3em;
+  margin: 0.25em;
+  font-size: 75%;
+}
+
+td input {
+  margin: 0.25em;
+  width: 4em;
+}
+
 @keyframes slideIn {
   from {
     opacity: 0.5;
