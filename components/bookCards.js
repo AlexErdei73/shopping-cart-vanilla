@@ -1,15 +1,12 @@
 import bookCardFactory from "./bookCard.js";
+import { updateAll } from "./table.js";
 
-function bookCardsFactory(appData, table) {
+function bookCardsFactory(appData) {
   const shoppingNode = document.querySelector(".shopping");
   const node = document.createElement("div");
   node.id = "books-container";
 
   const bookCards = [];
-
-  function updateAll() {
-    table.updateAll();
-  }
 
   const instance = { updateAll };
   appData.books.forEach((bookState, i) => {

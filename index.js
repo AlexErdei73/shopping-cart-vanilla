@@ -1,8 +1,8 @@
 import navigationBar from "./components/navigationBar.js";
 import bookCardsFactory from "./components/bookCards.js";
-import tableFactory from "./components/table.js";
+import { updateAll } from "./components/table.js";
 
-const appData = {
+export const appData = {
   books: [
     {
       title: "Mathematical Mathods in the Physical Sciences",
@@ -81,7 +81,6 @@ const appData = {
   totalPrice: 0,
 };
 
-const table = tableFactory(appData);
-bookCardsFactory(appData, table);
-table.updateAll();
+bookCardsFactory(appData);
+updateAll();
 navigationBar.showMainElement();
