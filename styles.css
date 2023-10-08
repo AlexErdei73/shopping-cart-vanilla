@@ -1,492 +1,492 @@
 @font-face {
-	font-family: "Roboto";
-	src: url("./font/Roboto-Black.ttf") format("ttf"),
-		url("./font/Roboto-BlackItalic.ttf") format("ttf"),
-		url("./font/Roboto-Bold.ttf") format("ttf");
+  font-family: "Roboto";
+  src: url("./font/Roboto-Black.ttf") format("ttf"),
+    url("./font/Roboto-BlackItalic.ttf") format("ttf"),
+    url("./font/Roboto-Bold.ttf") format("ttf");
 }
 
 :root {
-	background-color: darkgray;
-	font-family: "Roboto", Arial, Helvetica, sans-serif;
+  background-color: darkgray;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 body {
-	margin: 0;
+  margin: 0;
 }
 
 .hide {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 /* navigation bar */
 header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-color: rgb(24, 151, 173);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(24, 151, 173);
 }
 
 nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	color: white;
-	max-width: 100rem;
-	margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  max-width: 100rem;
+  margin: auto;
 }
 
 nav .logo {
-	min-width: max-content;
-	margin: 0 0 0 1em;
-	font-size: 1.5em;
-	text-align: left;
+  min-width: max-content;
+  margin: 0 0 0 1em;
+  font-size: 1.5em;
+  text-align: left;
 }
 
 nav ul {
-	flex: 1 1 45em;
-	display: flex;
-	justify-content: flex-end;
-	list-style: none;
-	padding: 0 1em;
+  flex: 1 1 45em;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0 1em;
 }
 
 nav li {
-	flex: 0 1 15em;
-	gap: 0.25em;
-	background-color: rgb(24, 151, 173);
-	display: flex;
-	justify-content: center;
+  flex: 0 1 15em;
+  gap: 0.25em;
+  background-color: rgb(24, 151, 173);
+  display: flex;
+  justify-content: center;
 }
 
 nav a {
-	display: block;
-	color: lightcyan;
-	font-size: 120%;
-	font-weight: 400;
-	border: none;
-	min-width: max-content;
-	width: 100%;
-	min-width: fit-content;
-	text-decoration: none;
-	text-align: center;
+  display: block;
+  color: lightcyan;
+  font-size: 120%;
+  font-weight: 400;
+  border: none;
+  min-width: max-content;
+  width: 100%;
+  min-width: fit-content;
+  text-decoration: none;
+  text-align: center;
 }
 
 nav a:hover {
-	color: white;
+  color: white;
 }
 
 nav #dropdown {
-	display: none;
-	background-color: rgb(24, 151, 173);
-	color: lightcyan;
-	font-size: 120%;
-	border: none;
-	min-width: max-content;
-	width: 100%;
-	min-width: fit-content;
+  display: none;
+  background-color: rgb(24, 151, 173);
+  color: lightcyan;
+  font-size: 120%;
+  border: none;
+  min-width: max-content;
+  width: 100%;
+  min-width: fit-content;
 }
 
 main {
-	margin: 3.7em auto 0;
-	max-width: 100rem;
+  margin: 3.7em auto 0;
+  max-width: 100rem;
 }
 
 .hidden {
-	display: none !important;
+  display: none !important;
 }
 
 #dropdown-menu {
-	margin: 0;
-	padding: 0;
-	position: fixed;
-	top: 1.61rem;
-	right: 0;
-	width: max-content;
-	display: none;
-	flex-direction: column;
-	gap: 0.04em;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 1.61rem;
+  right: 0;
+  width: max-content;
+  display: none;
+  flex-direction: column;
+  gap: 0.04em;
 }
 
 #dropdown-menu li {
-	flex-basis: 0;
+  flex-basis: 0;
 }
 
 .icon {
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	stroke-width: 0;
-	stroke: currentColor;
-	fill: currentColor;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
 
 .icon-cart {
-	color: lightcyan;
-	font-size: 1em;
-	position: relative;
-	top: 0.125em;
+  color: lightcyan;
+  font-size: 1em;
+  position: relative;
+  top: 0.125em;
 }
 
 .icon-cart:hover {
-	color: white;
+  color: white;
 }
 
 .icon-arrow_drop_down {
-	color: lightcyan;
-	position: relative;
-	top: 0.125em;
+  color: lightcyan;
+  position: relative;
+  top: 0.125em;
 }
 
 .icon-arrow_drop_down:hover {
-	color: white;
+  color: white;
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 0;
-	height: 0;
-	overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 nav output {
-	background-color: #555555;
-	padding: 0.25em;
-	border-radius: 0.25em;
+  background-color: #555555;
+  padding: 0.25em;
+  border-radius: 0.25em;
 }
 
 nav [href="#cart"] {
-	flex: 0 1 0;
+  flex: 0 1 0;
 }
 
 @media (max-width: 35em) {
-	nav .logo {
-		display: none;
-	}
+  nav .logo {
+    display: none;
+  }
 
-	article {
-		margin: 0 !important;
-	}
+  article {
+    margin: 0 !important;
+  }
 }
 
 @media (max-width: 18em) {
-	nav {
-		justify-content: flex-end;
-	}
-	nav ul {
-		display: none;
-	}
-	nav #dropdown {
-		display: block;
-		width: 1.3em;
-		border-radius: 50%;
-		font-size: min(32px, 1em);
-		border: 1px white solid;
-	}
+  nav {
+    justify-content: flex-end;
+  }
+  nav ul {
+    display: none;
+  }
+  nav #dropdown {
+    display: block;
+    width: 1.3em;
+    border-radius: 50%;
+    font-size: min(24px, 1em);
+    border: 1px white solid;
+  }
 
-	#dropdown-menu {
-		display: flex;
-		font-size: clamp(32px, 10vw, 2em);
-		top: min(75px, 2.35rem);
-	}
+  #dropdown-menu {
+    display: flex;
+    font-size: clamp(24px, 7vw, 2em);
+    top: min(56px, 2.35rem);
+  }
 
-	main {
-		margin-top: min(75px, 2.35rem);
-	}
+  main {
+    margin-top: min(56px, 2.35rem);
+  }
 }
 
 /* homepage */
 .home {
-	background-color: white;
+  background-color: white;
 }
 
 article {
-	padding-top: 0.5rem;
-	margin-right: 10rem;
+  padding-top: 0.5rem;
+  margin-right: 10rem;
 }
 
 h1 {
-	margin: 0.5em 0 3rem 0.5rem;
-	font-size: 200%;
-	font-weight: 400;
+  margin: 0.5em 0 3rem 0.5rem;
+  font-size: 200%;
+  font-weight: 400;
 }
 
 h2 {
-	font-weight: 400;
+  font-weight: 400;
 }
 
 .section-container {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .image-container {
-	width: 30%;
-	min-width: 10em;
-	padding: 0.5em;
-	flex-grow: 1;
+  width: 30%;
+  min-width: 10em;
+  padding: 0.5em;
+  flex-grow: 1;
 }
 
 .image-container img {
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .text-container {
-	width: 60%;
-	padding: 0.5em;
-	flex-grow: 1;
+  width: 60%;
+  padding: 0.5em;
+  flex-grow: 1;
 }
 
 h2 {
-	margin: 0;
+  margin: 0;
 }
 
 @media (max-width: 21em) {
-	h1 {
-		font-size: clamp(24px, 2vw, 2em);
-	}
+  h1 {
+    font-size: clamp(24px, 2vw, 2em);
+  }
 
-	.section-container {
-		font-size: clamp(16px, 1vw, 1em);
-	}
+  .section-container {
+    font-size: clamp(16px, 1vw, 1em);
+  }
 }
 
 /* book-card */
 .book-card {
-	width: 15em;
-	background-color: white;
-	padding-bottom: 1em;
-	overflow: hidden;
-	margin: 0.5em;
+  width: 15em;
+  background-color: white;
+  padding-bottom: 1em;
+  overflow: hidden;
+  margin: 0.5em;
 }
 
 .book-card .image-container {
-	width: 100%;
-	max-width: 100%;
-	background-color: black;
-	padding: 0;
-	min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: black;
+  padding: 0;
+  min-width: 0;
 }
 
 .book-card img {
-	height: 15em;
-	width: auto;
-	display: block;
-	margin: auto;
-	box-sizing: border-box;
-	border: 2px solid white;
+  height: 15em;
+  width: auto;
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+  border: 2px solid white;
 }
 
 .book-card .price {
-	margin: 1em;
-	padding-left: 1em;
+  margin: 1em;
+  padding-left: 1em;
 }
 
 .book-card .controlls {
-	display: flex;
-	justify-content: space-around;
-	margin: 1em;
+  display: flex;
+  justify-content: space-around;
+  margin: 1em;
 }
 
 .controlls input {
-	width: 3em;
+  width: 3em;
 }
 
 .controlls button {
-	padding: 0.5em;
-	background-color: dodgerblue;
-	color: white;
-	border: none;
-	border-radius: 0.25em;
+  padding: 0.5em;
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  border-radius: 0.25em;
 }
 
 .controlls button:hover {
-	background-color: rgb(21, 101, 181);
+  background-color: rgb(21, 101, 181);
 }
 
 /* books-container */
 #books-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 @media (max-width: 17em) {
-	.book-card img {
-		height: min(15em, 90vw);
-	}
+  .book-card img {
+    height: min(15em, 90vw);
+  }
 
-	.book-card,
-	.book-card input,
-	.book-card button {
-		font-size: clamp(12px, 2vw, 1em);
-	}
+  .book-card,
+  .book-card input,
+  .book-card button {
+    font-size: clamp(12px, 2vw, 1em);
+  }
 }
 
 /* cart */
 div.cart {
-	min-height: 100vh;
-	background-color: white;
+  min-height: 100vh;
+  background-color: white;
 }
 
 table {
-	width: 100%;
-	max-width: 50em;
-	margin: auto;
-	border-collapse: collapse;
+  width: 100%;
+  max-width: 50em;
+  margin: auto;
+  border-collapse: collapse;
 }
 
 th,
 tr,
 td {
-	border: 1px solid black;
+  border: 1px solid black;
 }
 
 .button-container {
-	width: 100%;
-	text-align: center;
-	margin-top: 0.5em;
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5em;
 }
 
 button {
-	background-color: rgb(30, 109, 255);
-	color: white;
-	padding: 0.5em;
-	border: none;
-	border-radius: 0.25em;
-	font-size: 110%;
+  background-color: rgb(30, 109, 255);
+  color: white;
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.25em;
+  font-size: 110%;
 }
 
 button:hover {
-	background-color: rgb(0, 89, 255);
+  background-color: rgb(0, 89, 255);
+}
+
+td button {
+  padding: 0.3em;
+  margin: 0.25em;
+  font-size: 75%;
+}
+
+td input {
+  margin: 0.25em;
+  max-width: 3em;
+  font-size: inherit;
 }
 
 @media (max-width: 35em) {
-	th,
-	td {
-		font-size: clamp(12px, 2vw, 1em);
-	}
+  th,
+  td {
+    font-size: clamp(12px, 2vw, 1em);
+  }
 }
 
 /* modal */
 dialog {
-	padding: 0;
-	margin: auto;
-	border: 2px solid dodgerblue;
-	border-radius: 0.5em;
-	width: 20em;
-	min-width: min-content;
-	color: #1a1a1a;
-	background-color: white;
-	position: fixed;
+  padding: 0;
+  margin: auto;
+  border: 2px solid dodgerblue;
+  border-radius: 0.5em;
+  width: 20em;
+  min-width: min-content;
+  color: #1a1a1a;
+  background-color: white;
+  position: fixed;
 }
 
 dialog[open] {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 dialog .head {
-	background-color: dodgerblue;
-	color: white;
-	position: sticky;
-	top: 0;
-	left: 0;
-	width: 100%;
-	text-align: center;
-	padding: 0.25em 0;
-	font-size: 120%;
+  background-color: dodgerblue;
+  color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.25em 0;
+  font-size: 120%;
 }
 
 button.close {
-	border: none;
-	background-color: dodgerblue;
-	padding: 0.09em;
-	position: absolute;
-	top: 0;
-	right: 0.25em;
+  border: none;
+  background-color: dodgerblue;
+  padding: 0.09em;
+  position: absolute;
+  top: 0;
+  right: 0.25em;
 }
 
 button.close:hover {
-	background-color: dodgerblue;
-	color: white;
+  background-color: dodgerblue;
+  color: white;
 }
 
 dialog .body {
-	padding: 0.5em;
-	display: flex;
-	flex-direction: column;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
 }
 
 .cover {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: black;
-	opacity: 0.6;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.6;
 }
 
 .cover.open {
-	display: flex;
+  display: flex;
 }
 
 hr {
-	color: lightgray;
+  color: lightgray;
 }
 
 .modal-body .button-container {
-	display: flex;
-	justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 18em) {
-	dialog .head {
-		font-size: clamp(16px, 5vw, 1.2rem) !important;
-	}
+  dialog .head {
+    font-size: clamp(16px, 5vw, 1.2rem) !important;
+  }
 }
 
 .animate {
-	animation: 600ms slideIn;
+  animation: 600ms slideIn;
 }
 
 .animate-back {
-	animation: 600ms reverse slideIn;
-}
-
-td button {
-	padding: 0.3em;
-	margin: 0.25em;
-	font-size: 75%;
-}
-
-td input {
-	margin: 0.25em;
-	max-width: 3em;
-	font-size: inherit;
+  animation: 600ms reverse slideIn;
 }
 
 @keyframes slideIn {
-	from {
-		opacity: 0.5;
-		transform: translateY(-5em);
-	}
-	to {
-		opacity: 1;
-		transform: none;
-	}
+  from {
+    opacity: 0.5;
+    transform: translateY(-5em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
+  from {
+    opacity: 0;
+  }
 
-	to {
-		opacity: 1;
-	}
+  to {
+    opacity: 1;
+  }
 }
