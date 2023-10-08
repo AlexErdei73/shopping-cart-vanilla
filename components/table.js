@@ -50,6 +50,36 @@ function tableFactory(appData) {
     render();
   }
 
+  function handleClickRemove(event) {
+    const index = +event.target.id;
+    appData.books[index].number = 0;
+    appData.books[index].totalPrice = 0;
+    updateAll();
+  }
+
+  function handleChangeNumber(event) {
+    const index = +event.target.getAttribute("data-index");
+    const value = +event.target.value;
+    const min = +event.target.getAttribute("min");
+    if (isNaN(value)) return;
+    if (value < min) return;
+    appData.books[index].number = Math.floor(value);
+    appData.books[index].totalPrice = +(
+      Math.floor(value) * appData.books[index].unitPrice
+    ).toFixed(2);
+    updateAll();
+  }
+
+  function createNumberRow(dataNode, book) {
+    const input = dataNode.querySelector("input");
+    input.value = book.number;
+    input.setAttribute("data-index", appData.books.indexOf(book));
+    input.addEventListener("change", handleChangeNumber);
+    const button = dataNode.querySelector("button");
+    button.id = appData.books.indexOf(book);
+    button.addEventListener("click", handleClickRemove);
+  }
+
   function render() {
     removeNodes();
     appData.books
@@ -60,31 +90,8 @@ function tableFactory(appData) {
         for (let key in book) {
           const dataNode = tableRowNode.querySelector("." + key.toLowerCase());
           if (dataNode) {
-            if (key === "number") {
-              const input = dataNode.querySelector("input");
-              input.value = book[key];
-              input.setAttribute("data-index", appData.books.indexOf(book));
-              input.addEventListener("change", function (event) {
-                const index = +event.target.getAttribute("data-index");
-                const value = +event.target.value;
-                const min = +event.target.getAttribute("min");
-                if (isNaN(value)) return;
-                if (value < min) return;
-                appData.books[index].number = Math.floor(value);
-                appData.books[index].totalPrice = +(
-                  Math.floor(value) * appData.books[index].unitPrice
-                ).toFixed(2);
-                updateAll();
-              });
-              const button = dataNode.querySelector("button");
-              button.id = appData.books.indexOf(book);
-              button.addEventListener("click", function (event) {
-                const index = +event.target.id;
-                appData.books[index].number = 0;
-                appData.books[index].totalPrice = 0;
-                updateAll();
-              });
-            } else dataNode.textContent = book[key];
+            if (key === "number") createNumberRow(dataNode, book);
+            else dataNode.textContent = book[key];
           }
         }
         tableRows.push(tableRowNode);
