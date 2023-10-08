@@ -1,4 +1,4 @@
-import navigationBar from "./components/navigationBar.js";
+import { showMainElement } from "./components/navigationBar.js";
 import { updateInvoice } from "./components/table.js";
 import { initBooks } from "./components/bookCards.js";
 
@@ -83,4 +83,4 @@ export const appData = {
 
 initBooks();
 updateInvoice();
-navigationBar.showMainElement();
+showMainElement();
