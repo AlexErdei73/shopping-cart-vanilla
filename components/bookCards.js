@@ -1,4 +1,4 @@
-import bookCardFactory from "./bookCard.js";
+import { initBook } from "./bookCard.js";
 import { appData } from "../index.js";
 
 export function initBooks() {
@@ -6,13 +6,9 @@ export function initBooks() {
   const node = document.createElement("div");
   node.id = "books-container";
 
-  const bookCards = [];
-
   appData.books.forEach((bookState, i) => {
-    const bookCard = bookCardFactory(bookState, i);
-    bookCard.init();
-    bookCards[i] = bookCard;
-    node.appendChild(bookCard.node);
+    const bookNode = initBook(bookState);
+    node.appendChild(bookNode);
   });
   shoppingNode.appendChild(node);
 }

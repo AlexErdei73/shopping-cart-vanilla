@@ -44,7 +44,7 @@ function updateTotalPrice() {
     .reduce((prevPrice, price) => prevPrice + price, 0);
 }
 
-export function updateAll() {
+export function updateInvoice() {
   updateNumber();
   updateTotalPrice();
   render();
@@ -67,7 +67,7 @@ function handleChangeNumber(event) {
   appData.books[index].totalPrice = +(
     Math.floor(value) * appData.books[index].unitPrice
   ).toFixed(2);
-  updateAll();
+  updateInvoice();
 }
 
 function createNumberRow(dataNode, book) {

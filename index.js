@@ -1,5 +1,5 @@
 import navigationBar from "./components/navigationBar.js";
-import { updateAll } from "./components/table.js";
+import { updateInvoice } from "./components/table.js";
 import { initBooks } from "./components/bookCards.js";
 
 export const appData = {
@@ -82,5 +82,5 @@ export const appData = {
 };
 
 initBooks();
-updateAll();
+updateInvoice();
 navigationBar.showMainElement();
