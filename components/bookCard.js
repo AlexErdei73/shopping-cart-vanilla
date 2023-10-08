@@ -1,4 +1,6 @@
-function bookCardFactory(bookData, parent) {
+import { updateAll } from "./table.js";
+
+function bookCardFactory(bookData) {
   const temp = document.querySelectorAll("template")[3];
   const bookCard = temp.content.querySelector(".book-card");
   const node = document.importNode(bookCard, true);
@@ -16,7 +18,7 @@ function bookCardFactory(bookData, parent) {
     buyMeButton.addEventListener("click", function () {
       bookData.number += +bookNumberInput.value;
       bookData.totalPrice = bookData.number * bookData.unitPrice;
-      parent.updateAll();
+      updateAll();
     });
   }
 

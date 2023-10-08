@@ -1,6 +1,6 @@
 import navigationBar from "./components/navigationBar.js";
-import bookCardsFactory from "./components/bookCards.js";
 import { updateAll } from "./components/table.js";
+import { initBooks } from "./components/bookCards.js";
 
 export const appData = {
   books: [
@@ -81,6 +81,6 @@ export const appData = {
   totalPrice: 0,
 };
 
-bookCardsFactory(appData);
+initBooks();
 updateAll();
 navigationBar.showMainElement();
