@@ -30,87 +30,90 @@ const totalNumberOutputNodes = document.querySelectorAll("nav output");
 okButton.addEventListener("click", closeModal);
 
 function updateNumber() {
-	appData.totalNumber = appData.books
-		.map((book) => book.number)
-		.reduce((prevNumber, number) => prevNumber + number, 0);
-	totalNumberOutputNodes.forEach((outputNode) => {
-		outputNode.textContent = appData.totalNumber;
-	});
+  appData.totalNumber = appData.books
+    .map((book) => book.number)
+    .reduce((prevNumber, number) => prevNumber + number, 0);
+  totalNumberOutputNodes.forEach((outputNode) => {
+    outputNode.textContent = appData.totalNumber;
+  });
 }
 
 function updateTotalPrice() {
-	appData.totalPrice = appData.books
-		.map((book) => book.totalPrice)
-		.reduce((prevPrice, price) => prevPrice + price, 0);
+  appData.totalPrice = appData.books
+    .map((book) => book.totalPrice)
+    .reduce((prevPrice, price) => prevPrice + price, 0);
 }
 
 export function updateInvoice() {
-	updateNumber();
-	updateTotalPrice();
-	render();
+  updateNumber();
+  updateTotalPrice();
+  render();
 }
 
 function handleClickRemove(event) {
-	const index = +event.target.id;
-	appData.books[index].number = 0;
-	appData.books[index].totalPrice = 0;
-	updateAll();
+  const index = +event.target.id;
+  appData.books[index].number = 0;
+  appData.books[index].totalPrice = 0;
+  updateInvoice();
 }
 
 function handleChangeNumber(event) {
-	const index = +event.target.getAttribute("data-index");
-	const value = +event.target.value;
-	const min = +event.target.getAttribute("min");
-	if (isNaN(value)) return;
-	if (value < min) return;
-	appData.books[index].number = Math.floor(value);
-	appData.books[index].totalPrice = +(
-		Math.floor(value) * appData.books[index].unitPrice
-	).toFixed(2);
-	updateInvoice();
+  const index = +event.target.getAttribute("data-index");
+  let value = +event.target.value;
+  const min = +event.target.getAttribute("min");
+  if (isNaN(value)) return;
+  if (value < min) {
+    event.target.value = 1;
+    value = 1;
+  }
+  appData.books[index].number = Math.floor(value);
+  appData.books[index].totalPrice = +(
+    Math.floor(value) * appData.books[index].unitPrice
+  ).toFixed(2);
+  updateInvoice();
 }
 
 function createNumberRow(dataNode, book) {
-	const input = dataNode.querySelector("input");
-	input.value = book.number;
-	input.setAttribute("data-index", appData.books.indexOf(book));
-	input.addEventListener("change", handleChangeNumber);
-	const button = dataNode.querySelector("button");
-	button.id = appData.books.indexOf(book);
-	button.addEventListener("click", handleClickRemove);
+  const input = dataNode.querySelector("input");
+  input.value = book.number;
+  input.setAttribute("data-index", appData.books.indexOf(book));
+  input.addEventListener("change", handleChangeNumber);
+  const button = dataNode.querySelector("button");
+  button.id = appData.books.indexOf(book);
+  button.addEventListener("click", handleClickRemove);
 }
 
 function render() {
-	removeNodes();
-	appData.books
-		.filter((book) => book.number > 0)
-		.forEach((book) => {
-			const tableRow = tableRowTemp.content.querySelector("tr");
-			const tableRowNode = document.importNode(tableRow, true);
-			for (let key in book) {
-				const dataNode = tableRowNode.querySelector("." + key.toLowerCase());
-				if (dataNode) {
-					if (key === "number") createNumberRow(dataNode, book);
-					else dataNode.textContent = book[key];
-				}
-			}
-			tableRows.push(tableRowNode);
-		});
-	const totalPriceNode = lastRowNode.querySelector(".totalprice");
-	totalPriceNode.textContent = appData.totalPrice.toFixed(2);
-	tableRows.push(lastRowNode);
-	appendRows();
+  removeNodes();
+  appData.books
+    .filter((book) => book.number > 0)
+    .forEach((book) => {
+      const tableRow = tableRowTemp.content.querySelector("tr");
+      const tableRowNode = document.importNode(tableRow, true);
+      for (let key in book) {
+        const dataNode = tableRowNode.querySelector("." + key.toLowerCase());
+        if (dataNode) {
+          if (key === "number") createNumberRow(dataNode, book);
+          else dataNode.textContent = book[key];
+        }
+      }
+      tableRows.push(tableRowNode);
+    });
+  const totalPriceNode = lastRowNode.querySelector(".totalprice");
+  totalPriceNode.textContent = appData.totalPrice.toFixed(2);
+  tableRows.push(lastRowNode);
+  appendRows();
 }
 
 function removeNodes() {
-	tableRows.forEach((rowNode) => {
-		rowNode.remove();
-	});
-	tableRows = [];
+  tableRows.forEach((rowNode) => {
+    rowNode.remove();
+  });
+  tableRows = [];
 }
 
 function appendRows() {
-	tableRows.forEach((rowNode) => tableNode.appendChild(rowNode));
+  tableRows.forEach((rowNode) => tableNode.appendChild(rowNode));
 }
 
 button.addEventListener("click", openModal);
