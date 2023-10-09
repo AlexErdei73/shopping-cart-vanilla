@@ -27,11 +27,15 @@ function updateDOM(index) {
   document.querySelector("main h1").focus();
 }
 
+function hideDropdownMenu() {
+  const dropDownMenu = document.querySelector("#dropdown-menu");
+  dropDownMenu.classList.toggle("hidden");
+}
+
 function handleDropdownButtonClick(event) {
   const button = event.currentTarget;
   if (button.id === "dropdown") {
-    const dropDownMenu = document.querySelector("#dropdown-menu");
-    dropDownMenu.classList.toggle("hidden");
+    hideDropdownMenu();
     return;
   }
 }
@@ -40,6 +44,7 @@ export function showMainElement() {
   const component = window.location.hash.slice(1) || components[0];
   const index = components.indexOf(component);
   updateDOM(index);
+  hideDropdownMenu();
 }
 
 dropdownButton.addEventListener("click", handleDropdownButtonClick);
