@@ -4,6 +4,7 @@ const titleNode = document.querySelector("title");
 const pageTitleLiveRegion = document.querySelector("#page-title-live-region");
 const mainNode = document.querySelector("main");
 const dropdownButton = document.querySelector("#dropdown");
+const anchors = document.querySelectorAll("nav a");
 
 const components = ["home", "shopping", "cart"];
 const nodes = [];
@@ -29,13 +30,15 @@ function updateDOM(index) {
 
 function hideDropdownMenu() {
   const dropDownMenu = document.querySelector("#dropdown-menu");
-  dropDownMenu.classList.toggle("hidden");
+  if (dropDownMenu.classList.contains("hidden")) return;
+  dropDownMenu.classList.add("hidden");
 }
 
 function handleDropdownButtonClick(event) {
   const button = event.currentTarget;
   if (button.id === "dropdown") {
-    hideDropdownMenu();
+    const dropDownMenu = document.querySelector("#dropdown-menu");
+    dropDownMenu.classList.remove("hidden");
     return;
   }
 }
@@ -44,8 +47,9 @@ export function showMainElement() {
   const component = window.location.hash.slice(1) || components[0];
   const index = components.indexOf(component);
   updateDOM(index);
-  hideDropdownMenu();
 }
 
 dropdownButton.addEventListener("click", handleDropdownButtonClick);
 window.addEventListener("hashchange", showMainElement);
+mainNode.addEventListener("click", hideDropdownMenu);
+anchors.forEach((anchor) => anchor.addEventListener("click", hideDropdownMenu));

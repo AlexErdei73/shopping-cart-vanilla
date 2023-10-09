@@ -387,12 +387,13 @@ dialog {
   padding: 0;
   margin: auto;
   border: 2px solid dodgerblue;
-  border-radius: 0.5em;
+  border-radius: 8px;
   width: 20em;
   min-width: min-content;
   color: #1a1a1a;
   background-color: white;
   position: fixed;
+  font-size: 16px;
 }
 
 dialog[open] {
@@ -401,6 +402,8 @@ dialog[open] {
 }
 
 dialog .head {
+  display: flex;
+  flex-direction: row-reverse;
   background-color: dodgerblue;
   color: white;
   position: sticky;
@@ -412,13 +415,16 @@ dialog .head {
   font-size: 120%;
 }
 
+dialog .head output {
+  flex: 1 0 0;
+}
+
 button.close {
+  align-self: flex-start;
+  margin-top: -0.35em;
   border: none;
   background-color: dodgerblue;
   padding: 0.09em;
-  position: absolute;
-  top: 0;
-  right: 0.25em;
 }
 
 button.close:hover {
@@ -457,13 +463,17 @@ hr {
 }
 
 @media (max-width: 31em) {
+  dialog {
+    min-height: fit-content;
+  }
+
   dialog .head {
-    font-size: clamp(16px, 5vw, 1.2rem) !important;
+    font-size: clamp(10px, 5vw, 1.2rem) !important;
   }
 
   dialog .body,
   .body button {
-    font-size: clamp(8px, 2vw, 1rem) !important;
+    font-size: clamp(7.5px, 2vw, 1rem) !important;
   }
 }
 
