@@ -1,18 +1,13 @@
 import { initModal, openModal, closeModal } from "./modal.js";
 import { appData } from "../index.js";
+import { importTemp } from "../helper.js";
 
-const temps = document.querySelectorAll("template");
-const tableRowTemp = temps[4];
 const node = document.createElement("div");
 node.classList.add("table-container");
-const tableNode = document.createElement("table");
+const tableNode = importTemp(4, "table");
 node.appendChild(tableNode);
-const headRowTemp = temps[6];
-const headRow = headRowTemp.content.querySelector("tr");
-const headRowNode = document.importNode(headRow, true);
-const lastRowTemp = temps[5];
-const lastRow = lastRowTemp.content.querySelector("tr");
-const lastRowNode = document.importNode(lastRow, true);
+const headRowNode = importTemp(6, "tr");
+const lastRowNode = importTemp(5, "tr");
 tableNode.appendChild(headRowNode);
 let tableRows = [];
 const buttonContainer = document.createElement("div");
