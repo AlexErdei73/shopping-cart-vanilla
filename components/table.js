@@ -4,10 +4,10 @@ import { importTemp } from "../helper.js";
 
 const node = document.createElement("div");
 node.classList.add("table-container");
-const tableNode = importTemp(4, "table");
+const tableNode = document.createElement("table");
 node.appendChild(tableNode);
-const headRowNode = importTemp(6, "tr");
-const lastRowNode = importTemp(5, "tr");
+const headRowNode = importTemp(6);
+const lastRowNode = importTemp(5);
 tableNode.appendChild(headRowNode);
 let tableRows = [];
 const buttonContainer = document.createElement("div");
@@ -68,7 +68,7 @@ function handleChangeNumber(event) {
   updateInvoice();
 }
 
-function createNumberRow(dataNode, book) {
+function createNumberCell(dataNode, book) {
   const input = dataNode.querySelector("input");
   input.value = book.number;
   input.setAttribute("data-index", appData.books.indexOf(book));
@@ -83,12 +83,11 @@ function render() {
   appData.books
     .filter((book) => book.number > 0)
     .forEach((book) => {
-      const tableRow = tableRowTemp.content.querySelector("tr");
-      const tableRowNode = document.importNode(tableRow, true);
+      const tableRowNode = importTemp(4);
       for (let key in book) {
         const dataNode = tableRowNode.querySelector("." + key.toLowerCase());
         if (dataNode) {
-          if (key === "number") createNumberRow(dataNode, book);
+          if (key === "number") createNumberCell(dataNode, book);
           else dataNode.textContent = book[key];
         }
       }

@@ -1,3 +1,5 @@
+import { importTemp } from "../helper.js";
+
 const titleNode = document.querySelector("title");
 const pageTitleLiveRegion = document.querySelector("#page-title-live-region");
 const mainNode = document.querySelector("main");
@@ -7,13 +9,11 @@ const components = ["home", "shopping", "cart"];
 const nodes = [];
 let prevIndex;
 
-const templates = document.querySelectorAll("template");
-templates.forEach((temp, i) => {
-  if (i > 2) return;
-  const component = temp.content.querySelector(`.${components[i]}`);
-  nodes[i] = document.importNode(component, true);
-  nodes[i].classList.add("hidden");
-  mainNode.appendChild(nodes[i]);
+components.forEach((_component, i) => {
+  const node = importTemp(i);
+  node.classList.add("hidden");
+  nodes[i] = node;
+  mainNode.appendChild(node);
 });
 
 function updateDOM(index) {

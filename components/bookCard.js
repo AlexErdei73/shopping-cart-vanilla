@@ -1,10 +1,8 @@
+import { importTemp } from "../helper.js";
 import { updateInvoice } from "./table.js";
 
-const temp = document.querySelectorAll("template")[3];
-const bookCard = temp.content.querySelector(".book-card");
-
 export function initBook(bookData) {
-  const bookNode = document.importNode(bookCard, true);
+  const bookNode = importTemp(3);
   const bookImg = bookNode.querySelector(".book-card img");
   const priceOutputNode = bookNode.querySelector(".book-card .price output");
   const bookNumberInput = bookNode.querySelector(".book-card input");
