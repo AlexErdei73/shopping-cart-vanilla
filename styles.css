@@ -456,9 +456,14 @@ hr {
   justify-content: flex-end;
 }
 
-@media (max-width: 18em) {
+@media (max-width: 31em) {
   dialog .head {
     font-size: clamp(16px, 5vw, 1.2rem) !important;
+  }
+
+  dialog .body,
+  .body button {
+    font-size: clamp(8px, 2vw, 1rem) !important;
   }
 }
 
